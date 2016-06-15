@@ -76,10 +76,7 @@ inventory_cleared = FALSE;
 player setVariable ["seated",FALSE];
 player addAction ["Clear vehicle inventory",QS_fnc_actionClearInventory,[],-97,FALSE,FALSE,'','[] call QS_fnc_conditionClearInventory'];
 
-//======================= Add players to Zeus
-//{_x addCuratorEditableObjects [[player],FALSE];} count allCurators;
-//{_x addCuratorEditableObjects [[player],FALSE];} foreach adminCurators;
-
+/*
 //======================= Remove any rf7800str radio and give a anprc152 instead
 	for "_i" from 1 to 999 do {
 		scopeName "radioLoop";
@@ -119,3 +116,4 @@ player addAction ["Clear vehicle inventory",QS_fnc_actionClearInventory,[],-97,F
 	};
 //======================= Auto Earplugs
 _null = [] execVM "scripts\vas\earplugs.sqf";
+*/
