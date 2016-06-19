@@ -35,7 +35,8 @@ _targets = ["Harcourt",
 			"forest clearing", 
 			"Saioko",
 			"Doodstil", 
-			"Ile Saint-George"];
+			"Ile Saint-George",
+			"Saint-George Airstrip"];
 
 _target1 = _targets call BIS_fnc_selectRandom;
 _targets = _targets - [_target1];
