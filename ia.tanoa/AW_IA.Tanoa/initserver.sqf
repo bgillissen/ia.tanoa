@@ -38,3 +38,9 @@ if (PARAMS_EasterEggs == 1) then {_null = [] execVM "scripts\easterEggs.sqf";};	
 adminCurators = allCurators;
 enableEnvironment FALSE;
 BACO_ammoSuppAvail = true; publicVariable "BACO_ammoSuppAvail";
+
+//-------------------------------------------------- Random start time
+
+_skips = [1,2,3,4,5,6,7,8,9,10,11,12];
+_skipTo = _skips call BIS_fnc_selectRandom;
+skipTime _skipTo;

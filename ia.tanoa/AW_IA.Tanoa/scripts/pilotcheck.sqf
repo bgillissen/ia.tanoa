@@ -6,6 +6,7 @@ _helipilots = ["B_Helipilot_F","B_helicrew_F","O_Helipilot_F","O_helicrew_F","I_
 _jetpilots = ["B_Pilot_F","O_Pilot_F","I_Pilot_F"];
 
 _aircraft_nocopilot = ["B_Heli_Transport_01_camo_F",
+					   "B_CTRG_Heli_Transport_01_tropic_F",
 					   "B_Heli_Transport_01_F",
 					   "I_Heli_Transport_02_F",
 					   "O_Heli_Light_02_F",
