@@ -8,18 +8,18 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=835;
+		nextID=886;
 	};
 	class MarkerIDProvider
 	{
-		nextID=18;
+		nextID=59;
 	};
 	class Camera
 	{
-		pos[]={6950.9106,15.675562,7352.8979};
-		dir[]={-0.06537798,-0.13457648,-0.988868};
-		up[]={-0.0089004925,0.99083036,-0.13458502};
-		aside[]={-0.99793071,-1.077904e-006,0.065983705};
+		pos[]={11994.977,1198.9202,3161.1558};
+		dir[]={-0.88749391,-0.46084541,-0.0018428895};
+		up[]={-0.46085805,0.88747364,-0.00095774501};
+		aside[]={-0.0020762903,2.6632699e-007,1.0000118};
 	};
 };
 binarizationWanted=0;
@@ -512,7 +512,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=393;
+		items=444;
 		class Item0
 		{
 			dataType="Object";
@@ -588,6 +588,7 @@ class Mission
 			};
 			id=1;
 			type="B_T_Truck_01_fuel_F";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -872,6 +873,7 @@ class Mission
 			};
 			id=9;
 			type="B_Slingload_01_Fuel_F";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1020,6 +1022,7 @@ class Mission
 			};
 			id=12;
 			type="B_T_Truck_01_fuel_F";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1304,6 +1307,7 @@ class Mission
 			};
 			id=19;
 			type="B_Slingload_01_Fuel_F";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1544,6 +1548,7 @@ class Mission
 			};
 			id=37;
 			type="ContainmentArea_01_forest_F";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1583,6 +1588,7 @@ class Mission
 			};
 			id=38;
 			type="ContainmentArea_01_forest_F";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1702,6 +1708,7 @@ class Mission
 			};
 			id=45;
 			type="B_Slingload_01_Fuel_F";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5775,6 +5782,7 @@ class Mission
 			};
 			id=285;
 			type="B_CTRG_LSV_01_light_F";
+			atlOffset=2.3841858e-007;
 		};
 		class Item110
 		{
@@ -5828,6 +5836,7 @@ class Mission
 			};
 			id=296;
 			type="B_T_LSV_01_armed_F";
+			atlOffset=2.3841858e-007;
 		};
 		class Item113
 		{
@@ -6175,7 +6184,7 @@ class Mission
 				};
 			};
 			id=376;
-			atlOffset=-0.010999918;
+			atlOffset=-0.011000156;
 		};
 		class Item130
 		{
@@ -6193,7 +6202,7 @@ class Mission
 			};
 			id=377;
 			type="B_APC_Tracked_01_AA_F";
-			atlOffset=-0.010999918;
+			atlOffset=-0.011000156;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6737,6 +6746,7 @@ class Mission
 			};
 			id=430;
 			type="Land_PaperBox_open_full_F";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10654,7 +10664,7 @@ class Mission
 			};
 			id=523;
 			type="Land_PierConcrete_01_16m_F";
-			atlOffset=1.601;
+			atlOffset=1.6010001;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11741,7 +11751,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={-7316.3037,-60.779999,-4627.9272};
+				position[]={-11863.216,-60.779999,-8022.8403};
 			};
 			name="SERVER";
 			id=569;
@@ -11750,7 +11760,7 @@ class Mission
 		class Item236
 		{
 			dataType="Marker";
-			position[]={-7316.3037,0,-4627.9272};
+			position[]={-11863.216,0,-8022.8403};
 			name="aoCircle";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -11764,7 +11774,7 @@ class Mission
 		class Item237
 		{
 			dataType="Marker";
-			position[]={-7316.3037,1.0484851e+019,-4627.9272};
+			position[]={-11863.216,1.0484851e+019,-8022.8403};
 			name="aoMarker";
 			text="objectif";
 			type="o_unknown";
@@ -11775,7 +11785,7 @@ class Mission
 		class Item238
 		{
 			dataType="Marker";
-			position[]={-7316.3037,0,-4627.9272};
+			position[]={-11863.216,0,-8022.8403};
 			name="radioCircle";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -11973,7 +11983,7 @@ class Mission
 		class Item241
 		{
 			dataType="Trigger";
-			position[]={-7316.3037,99.835007,-4627.9272};
+			position[]={-11863.216,99.835007,-8022.8403};
 			class Attributes
 			{
 				name="admin_teleport";
@@ -11994,7 +12004,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.3037,170.68448,-4627.9272};
+				position[]={-11863.216,170.68448,-8022.8403};
 			};
 			side="Empty";
 			class Attributes
@@ -12012,7 +12022,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.3037,166.50208,-4627.9272};
+				position[]={-11863.216,166.50208,-8022.8403};
 			};
 			side="Empty";
 			class Attributes
@@ -12030,7 +12040,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.2627,166.16188,-4627.9253};
+				position[]={-11863.175,166.16188,-8022.8384};
 			};
 			side="Empty";
 			class Attributes
@@ -12048,7 +12058,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.2573,173.11244,-4627.9087};
+				position[]={-11863.17,173.11244,-8022.8218};
 			};
 			side="Empty";
 			class Attributes
@@ -12089,7 +12099,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.2905,341.97961,-4627.917};
+				position[]={-11863.203,341.97961,-8022.8301};
 			};
 			side="Empty";
 			class Attributes
@@ -12107,7 +12117,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.3018,168.05046,-4627.9258};
+				position[]={-11863.214,168.05046,-8022.8389};
 			};
 			side="Empty";
 			class Attributes
@@ -12118,14 +12128,14 @@ class Mission
 			};
 			id=581;
 			type="Land_Laptop_F";
-			atlOffset=0.92973328;
+			atlOffset=0.92971802;
 		};
 		class Item248
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.2944,168.33836,-4627.9189};
+				position[]={-11863.207,168.33836,-8022.832};
 			};
 			side="Empty";
 			class Attributes
@@ -12143,7 +12153,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.2725,115.46172,-4627.9038};
+				position[]={-11863.185,115.46172,-8022.8169};
 			};
 			side="Empty";
 			class Attributes
@@ -12180,7 +12190,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.2212,287.05429,-4627.8682};
+				position[]={-11863.133,287.05429,-8022.7813};
 			};
 			side="Empty";
 			class Attributes
@@ -12222,7 +12232,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-7316.2871,173.10196,-4627.9204};
+				position[]={-11863.199,173.10196,-8022.8335};
 			};
 			side="Empty";
 			class Attributes
@@ -12238,7 +12248,7 @@ class Mission
 		class Item253
 		{
 			dataType="Marker";
-			position[]={-7316.3037,1.2199398e+015,-4627.9272};
+			position[]={-11863.216,1.2199398e+015,-8022.8403};
 			name="radioMarker";
 			text="Radiotower";
 			type="loc_Transmitter";
@@ -12251,7 +12261,7 @@ class Mission
 		class Item254
 		{
 			dataType="Marker";
-			position[]={-7316.3037,0,-4627.9272};
+			position[]={-11863.216,0,-8022.8403};
 			name="sideMarker";
 			text="Side Mission";
 			type="mil_dot";
@@ -20993,13 +21003,13 @@ class Mission
 				angles[]={0,0.72729629,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf"";this addAction [""<t color='#fc9c02'>Take Earplugs</t>"",""scripts\VAS\Earplugs.sqf"",[],6,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
 			};
 			id=689;
 			type="Box_NATO_Equip_F";
+			atlOffset=1.0791366;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -21111,12 +21121,12 @@ class Mission
 				angles[]={0,1.8340967,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=691;
 			type="Land_SatelliteAntenna_01_F";
+			atlOffset=1.0791366;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -21990,7 +22000,7 @@ class Mission
 		class Item321
 		{
 			dataType="Marker";
-			position[]={-7549.0933,0,-4677.8223};
+			position[]={-12096.006,0,-8072.7354};
 			name="sideCircle";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -22064,7 +22074,7 @@ class Mission
 		class Item323
 		{
 			dataType="Marker";
-			position[]={-7203.9326,0,-4926.8545};
+			position[]={-11750.845,0,-8321.7676};
 			name="priorityCircle";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -22079,7 +22089,7 @@ class Mission
 		class Item324
 		{
 			dataType="Marker";
-			position[]={-7305.3672,1.7394873e+036,-4638.4282};
+			position[]={-11852.279,1.7394873e+036,-8033.3413};
 			name="priorityMarker";
 			text="Priority Mission";
 			type="mil_dot";
@@ -22189,7 +22199,7 @@ class Mission
 		class Item335
 		{
 			dataType="Marker";
-			position[]={-8229.8184,125.11011,-5275.5293};
+			position[]={-12122.186,125.11011,-7989.7148};
 			name="FOB_Marker";
 			text="FOB";
 			type="b_hq";
@@ -23925,7 +23935,7 @@ class Mission
 			};
 			id=834;
 			type="ContainmentArea_01_forest_F";
-			atlOffset=0.071000099;
+			atlOffset=0.070999861;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23949,6 +23959,470 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item393
+		{
+			dataType="Marker";
+			position[]={10994.133,-1.7749051e-009,6465.689};
+			name="Kotomo";
+			type="Empty";
+			id=835;
+			atlOffset=-22.812836;
+		};
+		class Item394
+		{
+			dataType="Marker";
+			position[]={12527.353,-1.7749051e-009,7529.5298};
+			name="Ouméré";
+			type="Empty";
+			id=836;
+			atlOffset=-38.351997;
+		};
+		class Item395
+		{
+			dataType="Marker";
+			position[]={13765.817,-3.4459136e-010,8436.085};
+			name="Luganville";
+			type="Empty";
+			id=837;
+			atlOffset=-19.746479;
+		};
+		class Item396
+		{
+			dataType="Marker";
+			position[]={13971.837,5.9096017e+035,10006.7};
+			name="Vatukoulo";
+			type="Empty";
+			id=838;
+			atlOffset=5.9096017e+035;
+		};
+		class Item397
+		{
+			dataType="Marker";
+			position[]={14242.87,-3.4436753e-010,11397.818};
+			name="Ba";
+			type="Empty";
+			id=839;
+			atlOffset=-35.369778;
+		};
+		class Item398
+		{
+			dataType="Marker";
+			position[]={13536.588,-3.4459136e-010,11900.894};
+			name="Blue Pearl industrial port";
+			type="Empty";
+			id=840;
+			atlOffset=-2.6500001;
+		};
+		class Item399
+		{
+			dataType="Marker";
+			position[]={12486.502,-3.4425562e-010,12628.047};
+			name="Ovau";
+			type="Empty";
+			id=841;
+			atlOffset=-15.921063;
+		};
+		class Item400
+		{
+			dataType="Marker";
+			position[]={11758.248,-1.7749051e-009,13024.578};
+			name="La Rochelle Aerodrome";
+			type="Empty";
+			id=842;
+			atlOffset=-8.5385504;
+		};
+		class Item401
+		{
+			dataType="Marker";
+			position[]={9649.9932,5.9096017e+035,13476.919};
+			name="La Rochelle";
+			type="Empty";
+			id=843;
+			atlOffset=5.9096017e+035;
+		};
+		class Item402
+		{
+			dataType="Marker";
+			position[]={7952.0151,-0.17749661,13514.622};
+			name="Saint-Paul";
+			type="Empty";
+			id=844;
+			atlOffset=-3.7574868;
+		};
+		class Item403
+		{
+			dataType="Marker";
+			position[]={6508.1729,-0.17749661,12728.47};
+			name="Nicolet";
+			type="Empty";
+			id=845;
+			atlOffset=-4.5510573;
+		};
+		class Item404
+		{
+			dataType="Marker";
+			position[]={5734.6782,-1.4184689e-008,12298.813};
+			name="Oua-Oué";
+			type="Empty";
+			id=846;
+			atlOffset=-25.821569;
+		};
+		class Item405
+		{
+			dataType="Marker";
+			position[]={11062.186,-1.4184689e-008,8476.7744};
+			name="Temple ruins";
+			type="Empty";
+			id=847;
+			atlOffset=-216.77;
+		};
+		class Item406
+		{
+			dataType="Marker";
+			position[]={11926.597,-1.4184689e-008,10293.708};
+			name="Red Spring surface mine";
+			type="Empty";
+			id=848;
+			atlOffset=-147.27928;
+		};
+		class Item407
+		{
+			dataType="Marker";
+			position[]={11072.026,-1.7749051e-009,11507.208};
+			name="Comms Bravo";
+			type="Empty";
+			id=849;
+			atlOffset=-350.41592;
+		};
+		class Item408
+		{
+			dataType="Marker";
+			position[]={9956.3311,1.2570767e+020,12097.87};
+			name="Mont Tanoa";
+			type="Empty";
+			id=850;
+			atlOffset=1.2570767e+020;
+		};
+		class Item409
+		{
+			dataType="Marker";
+			position[]={11363.865,-0.17749661,12326.874};
+			name="Nasua";
+			type="Empty";
+			id=851;
+			atlOffset=-114.38864;
+		};
+		class Item410
+		{
+			dataType="Marker";
+			position[]={8848.4922,-1.4184689e-008,11915.754};
+			name="Lumberyard";
+			type="Empty";
+			id=852;
+			atlOffset=-184.21794;
+		};
+		class Item411
+		{
+			dataType="Marker";
+			position[]={8266.6367,-1.7749051e-009,11120.563};
+			name="Buawa";
+			type="Empty";
+			id=853;
+			atlOffset=-128.12535;
+		};
+		class Item412
+		{
+			dataType="Marker";
+			position[]={8063.938,-0.17749661,11948.55};
+			name="Galili";
+			type="Empty";
+			id=854;
+			atlOffset=-216.39098;
+		};
+		class Item413
+		{
+			dataType="Marker";
+			position[]={7035.335,1.2570767e+020,9717.916};
+			name="Jungle";
+			type="Empty";
+			id=855;
+			atlOffset=1.2570767e+020;
+		};
+		class Item414
+		{
+			dataType="Marker";
+			position[]={6071.418,-2141.0889,8587.3057};
+			name="Lobaka";
+			type="Empty";
+			id=856;
+			atlOffset=-2171.8203;
+		};
+		class Item415
+		{
+			dataType="Marker";
+			position[]={9181.1348,-6.4786227e-024,8734.3828};
+			name="Lakatoro";
+			type="Empty";
+			id=857;
+			atlOffset=-221.70073;
+		};
+		class Item416
+		{
+			dataType="Marker";
+			position[]={9009.3721,-2.9326735,6587.5679};
+			name="Cocoa plantations";
+			type="Empty";
+			id=858;
+			atlOffset=-5.7623949;
+		};
+		class Item417
+		{
+			dataType="Marker";
+			position[]={11728.201,-2143.0576,4104.6479};
+			name="FOB_sg";
+			type="Empty";
+			id=859;
+			atlOffset=-2301.1221;
+		};
+		class Item418
+		{
+			dataType="Marker";
+			position[]={11721.034,-2.9326735,4082.5911};
+			name="FOB_sg_Hmv";
+			type="Empty";
+			angle=176.67195;
+			id=860;
+			atlOffset=-163.39073;
+		};
+		class Item419
+		{
+			dataType="Marker";
+			position[]={11730.25,-2143.0576,4077.0649};
+			name="FOB_sg_Hmv_1";
+			type="Empty";
+			angle=177.789;
+			id=861;
+			atlOffset=-2304.0339;
+		};
+		class Item420
+		{
+			dataType="Marker";
+			position[]={11715.223,158.36029,4112.9282};
+			name="FOB_sg_LZ";
+			type="Empty";
+			id=862;
+		};
+		class Item421
+		{
+			dataType="Marker";
+			position[]={11697.549,-2142.0732,4090.2671};
+			name="FOB_sg_Repair";
+			type="Empty";
+			angle=144.85196;
+			id=863;
+			atlOffset=-2303.8796;
+		};
+		class Item422
+		{
+			dataType="Marker";
+			position[]={11740.386,-6.4786227e-024,4092.7891};
+			name="FOB_sg_Ammo";
+			type="Empty";
+			angle=356.97989;
+			id=864;
+			atlOffset=-158.32053;
+		};
+		class Item423
+		{
+			dataType="Marker";
+			position[]={11741.036,-2.9326735,4103.6489};
+			name="FOB_sg_Medic";
+			type="Empty";
+			angle=96.532974;
+			id=865;
+			atlOffset=-161.01691;
+		};
+		class Item424
+		{
+			dataType="Marker";
+			position[]={11699.052,-2143.0576,4097.6948};
+			name="FOB_sg_Supp";
+			type="Empty";
+			angle=174.28098;
+			id=866;
+			atlOffset=-2305.0586;
+		};
+		class Item425
+		{
+			dataType="Marker";
+			position[]={11711.028,-6.4786227e-024,4094.53};
+			name="FOB_sg_Fuel";
+			type="Empty";
+			angle=115.588;
+			id=867;
+			atlOffset=-160.08809;
+		};
+		class Item426
+		{
+			dataType="Marker";
+			position[]={11740.103,159.51495,4081.2068};
+			name="FOB_sg_APC";
+			type="Empty";
+			angle=212.14294;
+			id=868;
+		};
+		class Item427
+		{
+			dataType="Marker";
+			position[]={11332.438,-1.7749051e-009,5188.4849};
+			name="Harcourt";
+			type="Empty";
+			id=869;
+			atlOffset=-2.7420619;
+		};
+		class Item428
+		{
+			dataType="Marker";
+			position[]={10212.646,-3.2685621e-010,4992.0659};
+			name="Lösi";
+			type="Empty";
+			id=870;
+			atlOffset=-9.8519039;
+		};
+		class Item429
+		{
+			dataType="Marker";
+			position[]={9405.042,-3.2685621e-010,4005.7009};
+			name="Moddergat";
+			type="Empty";
+			id=871;
+			atlOffset=-6.2731447;
+		};
+		class Item430
+		{
+			dataType="Marker";
+			position[]={8791.2734,-2.9326735,4782.564};
+			name="La Foa";
+			type="Empty";
+			id=872;
+			atlOffset=10.308556;
+		};
+		class Item431
+		{
+			dataType="Marker";
+			position[]={8906.4521,-2.9326735,3668.0879};
+			name="Tobakoro";
+			type="Empty";
+			id=873;
+			atlOffset=-15.570644;
+		};
+		class Item432
+		{
+			dataType="Marker";
+			position[]={10342.498,-2143.0576,2683.9031};
+			name="Blerick";
+			type="Empty";
+			id=874;
+			atlOffset=-2145.3748;
+		};
+		class Item433
+		{
+			dataType="Marker";
+			position[]={11560.107,-2143.0576,2674.2129};
+			name="Lijnhaven";
+			type="Empty";
+			id=875;
+			atlOffset=-2146.5098;
+		};
+		class Item434
+		{
+			dataType="Marker";
+			position[]={12307.924,-3.267443e-010,1859.415};
+			name="Taga";
+			type="Empty";
+			id=876;
+			atlOffset=-108.79391;
+		};
+		class Item435
+		{
+			dataType="Marker";
+			position[]={12958.679,-2141.0889,2150.074};
+			name="Rereki";
+			type="Empty";
+			id=877;
+			atlOffset=-2145.0833;
+		};
+		class Item436
+		{
+			dataType="Marker";
+			position[]={13261.658,-3.2685621e-010,2976.2041};
+			name="Bua Bua";
+			type="Empty";
+			id=878;
+			atlOffset=-49.954983;
+		};
+		class Item437
+		{
+			dataType="Marker";
+			position[]={12110.143,-2143.0576,2487.1509};
+			name="Fortress Ruins";
+			type="Empty";
+			id=879;
+			atlOffset=-2146.551;
+		};
+		class Item438
+		{
+			dataType="Marker";
+			position[]={12666.553,-2.4111395e-023,3334.344};
+			name="Port-Boisé";
+			type="Empty";
+			id=880;
+			atlOffset=-16.670658;
+		};
+		class Item439
+		{
+			dataType="Marker";
+			position[]={12296.982,73.67173,3914.9468};
+			name="forest clearing";
+			type="Empty";
+			id=881;
+		};
+		class Item440
+		{
+			dataType="Marker";
+			position[]={12373.924,-131.62958,4499.7651};
+			name="Saioko";
+			type="Empty";
+			id=882;
+			atlOffset=-171.34253;
+		};
+		class Item441
+		{
+			dataType="Marker";
+			position[]={12775.3,-131.50653,4780.3369};
+			name="Doodstil";
+			type="Empty";
+			id=883;
+			atlOffset=-134.98044;
+		};
+		class Item442
+		{
+			dataType="Marker";
+			position[]={13390.22,-132.00653,5190.564};
+			name="Ile Saint-George";
+			type="Empty";
+			id=884;
+			atlOffset=-167.32199;
+		};
+		class Item443
+		{
+			dataType="Marker";
+			position[]={11642.773,-117.78403,3128.406};
+			name="Saint-George Airstrip";
+			type="Empty";
+			id=885;
+			atlOffset=-122.96889;
 		};
 	};
 	class Connections

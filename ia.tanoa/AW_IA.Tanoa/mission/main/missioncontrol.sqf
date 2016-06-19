@@ -30,8 +30,6 @@ while { true } do {
 	_mission = _missionList call BIS_fnc_selectRandom;
 	_currentMission = execVM format ["mission\main\islands\%1.sqf", _mission];
 	
-	systemChat format ["Current Island : %1", _mission];
-	
 	waitUntil {
 		sleep 5;
 		scriptDone _currentMission
