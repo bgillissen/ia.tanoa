@@ -21,6 +21,7 @@ _loopTimeout = 20;
 
 _missionList = [
 	"ravi-ta",
+	"saintgeorge",
 	"main"
 ];
 

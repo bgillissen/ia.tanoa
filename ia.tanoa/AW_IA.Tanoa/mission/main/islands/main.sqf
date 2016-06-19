@@ -20,9 +20,35 @@ private ["_target1","_target2","_target3","_targetArray","_pos","_i","_position"
 eastSide = createCenter east;
 
 //---------------------------------------------- AO location marker array
-_targets = ["Georgetown", "Regina", "Tanouka"];
+_targets = ["Georgetown", 
+			"Regina", 
+			"Tanouka", 
+			"Kotomo", 
+			"Ouméré", 
+			"Luganville", 
+			"Vatukoulo", 
+			"Ba", 
+			"Blue Pearl industrial port", 
+			"Ovau",
+			"La Rochelle Aerodrome", 
+			"La Rochelle", 
+			"Saint-Paul", 
+			"Nicolet", 
+			"Oua-Oué", 
+			"Temple ruins", 
+			"Red Spring surface mine",
+			"Comms Bravo",
+			"Mont Tanoa", 
+			"Nasua", 
+			"Lumberyard", 
+			"Buawa", 
+			"Galili", 
+			"Jungle", 
+			"Lobaka", 
+			"Lakatoro", 
+			"Cocoa plantations"];
 
-/*
+
 _target1 = _targets call BIS_fnc_selectRandom;
 _targets = _targets - [_target1];
 _target2 = _targets call BIS_fnc_selectRandom;
@@ -30,9 +56,6 @@ _targets = _targets - [_target2];
 _target3 = _targets call BIS_fnc_selectRandom;
 
 _targetArray = [_target1,_target2,_target3];
-*/
-_targetArray = _targets;
-
 
 //----------------------------------------------- SELECT A FEW RANDOM AOs
 
