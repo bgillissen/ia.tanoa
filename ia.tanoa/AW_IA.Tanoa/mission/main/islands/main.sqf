@@ -44,7 +44,6 @@ while { count _targetArray > 0 } do {
 	
 	waitUntil {
 		sleep 5;
-		systemChat "wait for zuesMission to be 0";
 		(zuesMission == 0)
 	};
 	
@@ -56,15 +55,11 @@ while { count _targetArray > 0 } do {
 
 	currentAO = _targetArray call BIS_fnc_selectRandom;
 	
-	systemChat format ["Current AO : %1", currentAO];
-
 	//------------------------------------------ Edit and place markers for new target
 	
 	{_x setMarkerPos (getMarkerPos currentAO);} forEach ["aoCircle","aoMarker"];
 	"aoMarker" setMarkerText format["Take %1",currentAO];
 	sleep 1;
-
-	systemChat "Marker placed";
 
 	//------------------------------------------ Create AO detection trigger
 	
@@ -73,13 +68,10 @@ while { count _targetArray > 0 } do {
 	_dt setTriggerActivation ["EAST", "PRESENT", false];
 	_dt setTriggerStatements ["this","",""];
 
-	systemChat "Trigger placed";
 	//------------------------------------------ Spawn enemies
 	
 	enemiesArray =[currentAO] call QS_fnc_AOenemy;
 	publicVariable "enemiesArray";
-
-	systemChat "Enemy spawned";
 
 	//------------------------------------------ Spawn radiotower
 	
@@ -104,8 +96,6 @@ while { count _targetArray > 0 } do {
 	radioTowerAlive = true;
 	{ _x setMarkerPos _roughPos; } forEach ["radioMarker", "radioCircle"];
 
-	systemChat "radioTower spawned";
-
 	//-----------------------------------------------Spawn minefield
 	
 	_chance = random 10;
@@ -123,7 +113,6 @@ while { count _targetArray > 0 } do {
 		_x addCuratorEditableObjects [[radioTower], false];
 	} foreach allCurators;
 
-	systemChat "Minefield spawned or not";
 	//------------------------------------------- Set target start text
 	
 	_targetStartText = format

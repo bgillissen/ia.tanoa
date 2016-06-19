@@ -20,7 +20,7 @@ private ["_mission","_missionList","_currentMission","_nextMission","_loopTimeou
 _loopTimeout = 20;
 
 _missionList = [
-	//"ravi-ta",
+	"ravi-ta",
 	"main"
 ];
 

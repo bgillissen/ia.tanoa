@@ -259,7 +259,7 @@ for "_x" from 1 to 3 do {
 [(units jtacEASTGroup)] call QS_fnc_setSkill4;
 _enemiesArray set [count _enemiesArray,jtacEASTGroup];
 {_x setRank "COLONEL";} count (units jtacEASTGroup);
-{_x addCuratorEditableObjects [units jtacEASTGroup,FALSE];} count allCurators;
+{_x addCuratorEditableObjects [units jtacEASTGroup,false];} count allCurators;
 */
 
 //=========== ENEMIES IN BUILDINGS
@@ -278,7 +278,7 @@ if (PARAMS_EnemiesInBuildings != 0) then {
 		0 = [_pos,units _AOgarrisonGroup,500,0,[0,20],true,true] call SHK_fnc_buildingPos02;
 		[(units _AOgarrisonGroup)] call QS_fnc_setSkill2;
 		
-		{_x addCuratorEditableObjects [(units _AOgarrisonGroup),FALSE];} count allCurators;	
+		{_x addCuratorEditableObjects [(units _AOgarrisonGroup),false];} count allCurators;	
 		
 		_enemiesArray set [count _enemiesArray,_AOgarrisonGroup];
 	};

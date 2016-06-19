@@ -63,10 +63,7 @@ _sniperOpt = ["optic_SOS",
               "optic_LRPS"
               ];
 //===== THERMAL OPTICS
-_opticsAllowed = ["rhsusf_usmc_lar_marpat_wd_squadleader",
-                  "rhsusf_army_marpat_d_squadleader",
-                  "rhsusf_army_ocp_squadleader"
-                  ];
+_opticsAllowed = ["B_Soldier_SL_F"];
 _specialisedOptics = ["optic_Nightstalker",
                       "optic_tws",
                       "optic_tws_mg"
