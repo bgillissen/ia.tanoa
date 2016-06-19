@@ -18,7 +18,7 @@ private ["_c","_v","_type"];
 _c = false;
 _v = vehicle player;
 _type = typeOf _v;
-_uh80 = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F","B_Heli_Transport_03_F"];
+_uh80 = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F","B_Heli_Transport_03_F", "B_CTRG_Heli_Transport_01_tropic_F"];
 
 if (_type in _uh80) then {
 	if (_v getVariable "turretR_locked") then {
