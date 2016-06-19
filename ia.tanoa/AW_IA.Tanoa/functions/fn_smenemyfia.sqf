@@ -16,11 +16,8 @@ ___________________________________________*/
 
 //---------- CONFIG
 
-//#define INF_TEAMS "IRG_InfSentry","IRG_InfSquad","IRG_InfSquad_Weapons","IRG_InfTeam","IRG_InfTeam_AT","IRG_ReconSentry","IRG_SniperTeam_M"
-//#define VEH_TYPES "B_G_Offroad_01_armed_F"
-
-#define INF_TEAMS "rhsgref_group_cdf_reg_infantry_squad","rhsgref_group_cdf_reg_infantry_squad_weap"
-#define VEH_TYPES "rhsgref_ins_g_uaz_spg9","rhsgref_ins_g_uaz_ags","rhsgref_ins_g_uaz_dshkm_chdkz"
+#define INF_TEAMS "IRG_InfSentry","IRG_InfSquad","IRG_InfSquad_Weapons","IRG_InfTeam","IRG_InfTeam_AT","IRG_ReconSentry","IRG_SniperTeam_M"
+#define VEH_TYPES "B_G_Offroad_01_armed_F"
 private ["_x","_pos","_flatPos","_randomPos","_unitsArray","_enemiesArray","_infteamPatrol","_SMvehPatrol","_SMveh","_SMaaPatrol","_SMaa","_IRGsniperGroup"];
 _enemiesArray = [grpNull];
 _x = 0;

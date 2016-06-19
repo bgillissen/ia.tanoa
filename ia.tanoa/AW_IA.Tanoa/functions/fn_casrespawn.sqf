@@ -19,7 +19,7 @@ if (alive casJet) exitWith {};
 
 private ["_newCas","_casTypes","_pos","_dir","_obstructions","_obstructionArray"];
 
-_casTypes = ["RHS_Su25SM_vvsc","RHS_Su25SM_KH29_vvsc","RHS_Su25SM_CAS_vvsc","RHS_T50_vvs_generic","RHS_T50_vvs_051","RHS_T50_vvs_052","RHS_T50_vvs_053","RHS_T50_vvs_054"];
+_casTypes = ["I_Plane_Fighter_03_CAS_F","O_Plane_CAS_02_F","B_Plane_CAS_01_F","I_Plane_Fighter_03_AA_F"];
 
 if (PARAMS_CasFixedWingSupport == 1) then {
 	_newCas = "B_Plane_CAS_01_F";

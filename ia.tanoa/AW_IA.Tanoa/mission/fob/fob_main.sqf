@@ -37,9 +37,9 @@ supPad1 = _this select 9;
 _vicDir1 = (markerDir vicPos1);
 _vicDir2 = (markerDir vicPos2);
 
-_lightvic1 = "rhsusf_m1025_d_m2" createVehicle (getMarkerPos vicPos1);
+_lightvic1 = "B_MRAP_01_hmg_F" createVehicle (getMarkerPos vicPos1);
 _lightvic1 setDir _vicDir1;
-_lightvic2 = "rhsusf_m1025_d_m2" createVehicle (getMarkerPos vicPos2);
+_lightvic2 = "B_MRAP_01_hmg_F" createVehicle (getMarkerPos vicPos2);
 _lightvic2 setDir _vicDir2;
 _heliPadLz = "Land_HelipadSquare_F" createVehicle (getMarkerPos heliPad1);
 

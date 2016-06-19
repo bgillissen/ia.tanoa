@@ -1,6 +1,6 @@
 //------------------------- On Load
 
-//author = Rarek, AhoyWorld, Quiksilver. Tweaked by ben, putin, rainman; // Visible when loading mission
+author = Rarek, AhoyWorld, Quiksilver. Tweaked by ben, putin, rainman; // Visible when loading mission
 onLoadName = "TFU - Invade & Annex";				// Visible when loading mission
 OnLoadMission = "Welcome back to Task Force Unicorn Invade and Annex";
 loadScreen = "media\images\loading.jpg";				// Visible when loading mission

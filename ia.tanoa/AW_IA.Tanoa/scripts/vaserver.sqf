@@ -8,10 +8,8 @@ private ["_box"];
 
 _box = _this select 0;
 
-["AmmoboxInit",[_box,false,{true}]] call BIS_fnc_arsenal;
-//["AmmoboxInit",[_box,false,{true}]] call xla_fnc_arsenal;
-
-
+["AmmoboxInit",[_box,true,{true}]] call BIS_fnc_arsenal;
+/*
 //----------------------------BACKPACKS----------------------------
 [
     _box,
@@ -944,4 +942,4 @@ _box = _this select 0;
     true
 ] call BIS_fnc_addVirtualItemCargo;
 //] call xla_fnc_addVirtualItemCargo;
-
+*/

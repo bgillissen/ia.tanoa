@@ -12,8 +12,7 @@ Description:
 	Destroy chopper
 ____________________________________*/
 
-#define CHOPPER_TYPE "RHS_Mi24P_vdv","RHS_ka52_vvsc"
-
+#define CHOPPER_TYPE "O_Heli_Attack_02_black_F","O_Heli_Light_02_unarmed_F","B_Heli_Attack_01_F"
 private ["_objPos","_flatPos","_accepted","_position","_randomDir","_hangar","_x","_enemiesArray","_briefing","_fuzzyPos","_unitsArray","_dummy","_object"];
 _c4Message = ["Chopper data secured. The charge has been set! 30 seconds until detonation.","Heli data secured. The explosives have been set! 30 seconds until detonation.","Chopper intel secured. The charge is planted! 30 seconds until detonation."] call BIS_fnc_selectRandom;
 
@@ -112,26 +111,23 @@ while { sideMissionUp } do {
 		hqSideChat = _c4Message;
 		[hqSideChat] remoteExec ["AW_fnc_globalSideChat",0,false];
 	
-		//-------------------- Prepare BOOM!
+		//-------------------- BOOM!
 		
 		_dummy setPos [(getPos sideObj select 0), ((getPos sideObj select 1) +3), ((getPos sideObj select 2) + 0.5)];
 		sleep 0.1;
 		_object setPos [-10000,-10000,0];					// hide objective
 		sleep 30;											// ghetto bomb timer
-		
-		//-------------------- DE-BRIEFING
-
-		[] call QS_fnc_SMhintSUCCESS;
-		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"];
-		sideMissionUp = false;
-		
-		//-------------------- BOOM!
 		"Bo_GBU12_LGB" createVehicle getPos _dummy; 		// default "Bo_Mk82"
 		_dummy setPos [-10000,-10000,1];					// hide dummy
 		researchTable setPos [-10000,-10000,1];				// hide research table
 		sleep 0.1;
 	
-			
+		//-------------------- DE-BRIEFING
+
+		[] call QS_fnc_SMhintSUCCESS;
+		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"];
+		sideMissionUp = false;
+	
 		//--------------------- DELETE
 		sleep 120;
 		{ deleteVehicle _x } forEach [sideObj,house];

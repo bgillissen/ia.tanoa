@@ -28,11 +28,8 @@ Notes / To Do:
 	
 ___________________________________________________________________________*/
 
-//#define OBJVEH_TYPES "O_MRAP_02_F","I_MRAP_03_F"
-//#define OBJUNIT_TYPES "O_officer_F","O_Soldier_SL_F","O_recon_TL_F","O_diver_TL_F"
-
-#define OBJVEH_TYPES "rhs_uaz_open_MSV_01","rhs_uaz_MSV_01","rhs_tigr_msv"
-#define OBJUNIT_TYPES "rhs_msv_emr_officer","rhs_msv_flora_officer","rhs_msv_mflora_officer"
+#define OBJVEH_TYPES "O_MRAP_02_F","I_MRAP_03_F"
+#define OBJUNIT_TYPES "O_officer_F","O_Soldier_SL_F","O_recon_TL_F","O_diver_TL_F"
 
 private ["_x","_targetTrigger","_aGroup","_bGroup","_cGroup","_objUnit1","_objUnit2","_objUnit3","_obj1","_obj2","_obj3","_intelObj","_enemiesArray","_randomDir","_poi","_flatPos","_flatPos1","_flatPos2","_flatPos3","_position","_accepted","_fuzzyPos","_briefing","_escapeWP"];
 

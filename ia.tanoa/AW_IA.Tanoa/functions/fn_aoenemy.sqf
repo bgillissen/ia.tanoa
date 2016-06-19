@@ -56,7 +56,7 @@ for "_x" from 1 to PARAMS_AAPatrol do {
 	} foreach adminCurators;
 
 };
-systemChat "AA placed";
+	
 //---------- INFANTRY PATROLS RANDOM
 	
 for "_x" from 1 to PARAMS_GroupPatrol do {
@@ -72,7 +72,7 @@ for "_x" from 1 to PARAMS_GroupPatrol do {
 	} foreach adminCurators;
 
 };
-systemChat "INF placed";	
+	
 //---------- STATIC WEAPONS
 
 for "_x" from 1 to PARAMS_StaticMG do {
@@ -98,7 +98,7 @@ for "_x" from 1 to PARAMS_StaticMG do {
 		_x addCuratorEditableObjects [units _staticGroup, false];
 	} foreach adminCurators;
 };
-systemChat "Static placed";	
+	
 //---------- INFANTRY OVERWATCH
 	
 for "_x" from 1 to PARAMS_Overwatch do {
@@ -114,7 +114,7 @@ for "_x" from 1 to PARAMS_Overwatch do {
 	} foreach adminCurators;
 
 };
-systemChat "Overwatch placed";
+
 //--------- MRAP
 
 for "_x" from 0 to 1 do {
@@ -148,7 +148,7 @@ for "_x" from 0 to 1 do {
 
 
 };
-systemChat "MRAP placed";	
+	
 //---------- GROUND VEHICLE RANDOM
 	
 for "_x" from 0 to (3 + (random 2)) do {
@@ -181,7 +181,7 @@ for "_x" from 0 to (3 + (random 2)) do {
 	} foreach adminCurators;
 
 };
-systemChat "VehRandom placed";	
+	
 //---------- HELICOPTER	
 	
 if((random 10 <= PARAMS_AirPatrol)) then {
@@ -225,7 +225,6 @@ if((random 10 <= PARAMS_AirPatrol)) then {
 	} foreach adminCurators;
 
 };
-systemChat "Chopah placed";
 
 //---------- SNIPERS
 	
@@ -243,7 +242,7 @@ for "_x" from 1 to PARAMS_SniperTeamsPatrol do {
 	} foreach adminCurators;
 
 };
-systemChat "Sniper placed";
+
 //============== JTAC, disabled temporarily
 
 /*
@@ -284,7 +283,7 @@ if (PARAMS_EnemiesInBuildings != 0) then {
 		_enemiesArray set [count _enemiesArray,_AOgarrisonGroup];
 	};
 };
-systemChat "NME Building placed";	
+	
 //---------- COMMON
 
 [(units _patrolGroup)] call QS_fnc_setSkill1;
@@ -299,7 +298,7 @@ if (random 1 >= 0.5) then {
 [(units _aaGroup)] call QS_fnc_setSkill4;
 	
 //---------- GARRISON FORTIFICATIONS	
-	
+/*	
 {
 	_newGrp = [_x] call QS_fnc_garrisonFortEAST;
 	if (!isNull _newGrp) then { 
@@ -309,7 +308,5 @@ if (random 1 >= 0.5) then {
 		_x addCuratorEditableObjects [units _newGrp, false];
 	} forEach adminCurators;		
 } forEach (getMarkerPos currentAO nearObjects ["House", 800]);
-
-systemChat "GARRISON placed";
-
+*/
 _enemiesArray;

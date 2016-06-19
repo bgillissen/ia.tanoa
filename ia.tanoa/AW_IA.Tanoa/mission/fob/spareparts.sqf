@@ -10,7 +10,7 @@
 |	Last modified:
 |	Coded for AhoyWorld.
 */
-depotTruck = "rhsusf_M977A4_REPAIR_usarmy_d" createVehicle getMarkerPos "FOB_Depot";
+depotTruck = "B_Truck_01_Repair_F" createVehicle getMarkerPos "FOB_Depot";
 _truckDir1 = (markerDir "FOB_Depot");
 depotTruck setDir _truckDir1;
 depotTruck enableRopeAttach False;
@@ -27,8 +27,7 @@ while {(alive depotTruck) && (depotTruck distance (getMarkerPos "FOB_Marker") > 
 	
 	if ((_targetPos distance (getMarkerPos "respawn_west")) > 1500 && (_targetPos distance (getMarkerPos "FOB_Marker")) > 100) then { 
 		sleep 1;
-		//_GRP1 = [_targetPos, EAST, (configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> "OIA_InfSquad")] call BIS_fnc_spawnGroup;
-		_GRP1 = [_targetPos, EAST, (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry" >> "rhs_group_rus_msv_infantry_squad")] call BIS_fnc_spawnGroup;
+		_GRP1 = [_targetPos, EAST, (configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> "OIA_InfSquad")] call BIS_fnc_spawnGroup;
 		[_GRP1,_attackPos] call BIS_fnc_taskAttack;
 		waitUntil {(depotTruck distance _attackPos > 1000) || !(Fob_missions) || !(alive depotTruck) || (depotTruck distance (getMarkerPos "FOB_Marker") < 20)};
 		{deleteVehicle _x} forEach units _GRP1;

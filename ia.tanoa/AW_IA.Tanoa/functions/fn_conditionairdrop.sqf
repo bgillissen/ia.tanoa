@@ -19,8 +19,7 @@ private ["_veh","_cond"];
 _veh = vehicle player;
 _cond = false;
 
-//if ((_veh isKindOf "B_Heli_Transport_01_F") || {(_veh isKindOf "B_Heli_Transport_01_camo_F")}) then {
-if ((_veh isKindOf "RHS_UH60M_d") || {(_veh isKindOf "RHS_CH_47F_10")} || {(_veh isKindOf "rhsusf_CH53E_USMC_D")} ) then {
+if ((_veh isKindOf "B_Heli_Transport_01_F") || {(_veh isKindOf "B_Heli_Transport_01_camo_F")}) then {
 	if (_veh getVariable "airdrop_veh") then {
 		if ((position _veh) select 2 >= MIN_HEIGHT) then {
 			if (AW_ammoDropAvail) then {

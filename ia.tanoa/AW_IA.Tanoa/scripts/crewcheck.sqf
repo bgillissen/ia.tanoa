@@ -2,7 +2,7 @@
 // Since then been tweaked by many hands!
 // Notable contributors: chucky [allFPS], Quiksilver.
 
-_crews = ["rhsusf_army_ocp_crewman"];
+_crews = ["B_crew_F"];
 
 waitUntil {player == player};
 
@@ -20,7 +20,7 @@ while { true } do {
 		_veh = vehicle player;
 
 		//------------------------------ tanks and IFV are reserved to crew only
-		if ( (_veh isKindOf "Tank") || (_veh isKindOf "IFV")  ) then {
+		if ( (_veh isKindOf "Tank") || (_veh isKindOf "Wheeled_APC_F") ) then {
 			if(!_iamcrew) then {
 				_forbidden = [driver _veh];
 				if (player in _forbidden) then {

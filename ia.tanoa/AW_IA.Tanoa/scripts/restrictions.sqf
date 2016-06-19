@@ -21,13 +21,16 @@ private ["_opticsAllowed","_specialisedOptics","_optics","_basePos","_firstRun",
 #define MRK_MSG "Only Marksman and Spotters may use this weapon system. Rifle removed."
 
 //===== UAV TERMINAL
-_uavOperator = ["rhsusf_army_ocp_uav"];
+_uavOperator = ["B_soldier_UAV_F", "B_officer_F"];
 _uavRestricted = ["B_UavTerminal", 
                   "O_UavTerminal", 
                   "I_UavTerminal"];
 //===== AT-AA / MISSILE LAUNCHERS (excl RPG)
-_missileSoldiers = ["rhsusf_army_ocp_javelin", 
-                    "rhsusf_army_ocp_aa"
+_missileSoldiers = ["B_soldier_LAT_F",
+					"B_soldier_AA_F",
+					"B_soldier_AT_F",
+					"B_officer_F",
+					"B_recon_LAT_F"
                     ];
 _missileSpecialised = ["launch_NLAW_F",
                        "launch_B_Titan_F",
@@ -35,14 +38,10 @@ _missileSpecialised = ["launch_NLAW_F",
                        "launch_I_Titan_F",
                        "launch_B_Titan_short_F",
                        "launch_O_Titan_short_F",
-                       "launch_I_Titan_short_F",
-                       "rhs_weap_fim92",
-                       "rhs_weap_fgm148",
-                       "rhs_weap_smaw",
-                       "rhs_weap_smaw_green"
+                       "launch_I_Titan_short_F"
                        ];
 //===== SNIPER RIFLES
-_snipers = ["rhsusf_army_ocp_sniper"];
+_snipers = ["B_sniper_F","B_officer_F"];
 _sniperSpecialised = ["srifle_GM6_F",
                       "srifle_GM6_LRPS_F",
                       "srifle_GM6_SOS_F",
@@ -54,29 +53,14 @@ _sniperSpecialised = ["srifle_GM6_F",
                       "srifle_GM6_camo_SOS_F",
                       "srifle_LRR_camo_F",
                       "srifle_LRR_camo_LRPS_F",
-                      "srifle_LRR_camo_SOS_F",
-                      //"rhs_weap_svdp",        no restriction, only available by looting
-                      //"rhs_weap_svdp_npz",
-                      //"rhs_weap_svdp_wd",
-                      //"rhs_weap_svdp_wd_npz",
-                      //"rhs_weap_svds",
-                      //"rhs_weap_svds_npz",
-                      "rhs_weap_XM2010",
-                      "rhs_weap_XM2010_d",
-                      "rhs_weap_XM2010_sa",
-                      "rhs_weap_XM2010_wd",
-                      "rhs_weap_M107",
-                      "rhs_weap_M107_d",
-        			  "rhs_weap_M107_w"
-                      ];
+                      "srifle_LRR_camo_SOS_F"
+                     ];
 //===== SNIPER OPTICS
-_sniperTeam = ["rhsusf_army_ocp_sniper", 
-			   "rhsusf_army_ocp_jfo"
-			   ];
+_sniperTeam = ["B_sniper_F",
+			   "B_spotter_F"
+			  ];
 _sniperOpt = ["optic_SOS",
-              "optic_LRPS",
-              "rhsusf_acc_LEUPOLDMK4",
-              "rhsusf_acc_LEUPOLDMK4_2"
+              "optic_LRPS"
               ];
 //===== THERMAL OPTICS
 _opticsAllowed = ["rhsusf_usmc_lar_marpat_wd_squadleader",
@@ -117,23 +101,11 @@ _backpackRestricted = ["O_Mortar_01_support_F",
                        "I_AT_01_weapon_F",
                        "O_AT_01_weapon_F",
                        "I_AA_01_weapon_F",
-                       //"RHS_Podnos_Bipod_Bag",       // lootable by killing enemys (these are statics)
-                       //"RHS_Podnos_Gun_Bag",
-                       //"RHS_Metis_Gun_Bag",
-                       //"RHS_AGS30_Tripod_Bag",
-                       //"RHS_AGS30_Gun_Bag",
-                       //"RHS_DShkM_Gun_Bag",
-                       //"RHS_DShkM_TripodHigh_Bag",
-                       //"RHS_DShkM_TripodLow_Bag",
-                       //"RHS_Kord_Gun_Bag",
-                       //"RHS_Kord_Tripod_Bag",
-                       //"RHS_NSV_Tripod_Bag",
-                       //"RHS_NSV_Gun_Bag",
-                       //"RHS_SPG9_Gun_Bag",
-                       //"RHS_SPG9_Tripod_Bag",
                        "O_AA_01_weapon_F"];
 //===== LMG
-_autoRiflemen = ["rhsusf_army_ocp_machinegunner","rhsusf_army_ocp_autorifleman"];
+_autoRiflemen = ["B_soldier_AR_F",
+				 "B_officer_F"
+				];
 _autoSpecialised = ["MMG_02_black_F",
                     "MMG_02_camo_F",
                     "MMG_02_sand_F",
@@ -142,25 +114,14 @@ _autoSpecialised = ["MMG_02_black_F",
                     "MMG_01_base_F",
                     "MMG_01_hex_F",
                     "MMG_01_hex_ARCO_LP_F",
-                    "MMG_01_tan_F",
-                    "rhs_weap_m240B",
-                    "rhs_weap_m240B_CAP",
-                    "rhs_weap_m240G",
-                    "rhs_weap_m249_pip_L",
-                    "rhs_weap_m249_pip_L_para",
-                    "rhs_weap_m249_pip_L_vfg",
-                    "rhs_weap_m249_pip_S",
-                    "rhs_weap_m249_pip_S_para",
-                    "rhs_weap_m249_pip_S_vfg"
-                    //"rhs_weap_pkm",    //only accessible by looting enemies ;)
-                    //"rhs_weap_pkp"
+                    "MMG_01_tan_F"
                    ];
 
 //===== MARKSMAN
-_marksman = ["rhsusf_army_ocp_marksman",            //marksman
-             "rhsusf_usmc_lar_marpat_wd_marksman",  //recon marksman
-             "rhsusf_army_ocp_jfo"                  //spotter
-             ];
+_marksman = ["B_soldier_M_F",
+			 "B_spotter_F",
+			 "B_recon_M_F"                 //spotter
+            ];
 _marksmanGun = ["srifle_DMR_02_ACO_F",
                 "srifle_DMR_02_ARCO_F",
                 "srifle_DMR_02_camo_AMS_LP_F",
@@ -199,9 +160,7 @@ _marksmanGun = ["srifle_DMR_02_ACO_F",
                 "srifle_DMR_05_tan_f",
                 "srifle_DMR_06_camo_F",
                 "srifle_DMR_06_camo_khs_F",
-                "srifle_DMR_06_olive_F",
-                "rhs_weap_sr25",
-                "rhs_weap_sr25_ec"
+                "srifle_DMR_06_olive_F"
                 ];
 
 

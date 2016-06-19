@@ -60,13 +60,13 @@ private ["_basepos","_loopVar","_dir","_PTdir","_pos","_barrier","_unitsArray","
 	
 	sleep 1;
 	
-	priorityObj1 = "rhs_zsu234_aa" createVehicle _flatPos1;
+	priorityObj1 = "O_APC_Tracked_02_AA_F" createVehicle _flatPos1;
 	waitUntil {!isNull priorityObj1};
 	priorityObj1 setDir _PTdir;
 	
 	sleep 1;
 	
-	priorityObj2 = "rhs_zsu234_aa" createVehicle _flatPos2;
+	priorityObj2 = "O_APC_Tracked_02_AA_F" createVehicle _flatPos2;
 	waitUntil {!isNull priorityObj2};
 	priorityObj2 setDir _PTdir;
 	
@@ -74,7 +74,7 @@ private ["_basepos","_loopVar","_dir","_PTdir","_pos","_barrier","_unitsArray","
 	
 	//----- SPAWN AMMO TRUCK (for ambiance and plausibiliy of unlimited ammo)
 	
-	ammoTruck = "rhs_gaz66_ammo_vdv" createVehicle _flatPos3;
+	ammoTruck = "O_Truck_03_ammo_F" createVehicle _flatPos3;
 	waitUntil {!isNull ammoTruck};
 	ammoTruck setDir random 360;
 	
@@ -86,10 +86,10 @@ private ["_basepos","_loopVar","_dir","_PTdir","_pos","_barrier","_unitsArray","
 	
 	_priorityGroup = createGroup east;
 	
-		"rhs_msv_emr_combatcrew" createUnit [_flatPos, _priorityGroup];
-		"rhs_msv_emr_combatcrew" createUnit [_flatPos, _priorityGroup];
-		"rhs_msv_emr_combatcrew" createUnit [_flatPos, _priorityGroup];
-		"rhs_msv_emr_combatcrew" createUnit [_flatPos, _priorityGroup];
+		"O_officer_F" createUnit [_flatPos, _priorityGroup];
+		"O_officer_F" createUnit [_flatPos, _priorityGroup];
+		"O_engineer_F" createUnit [_flatPos, _priorityGroup];
+		"O_engineer_F" createUnit [_flatPos, _priorityGroup];
 		
 		((units _priorityGroup) select 0) assignAsCommander priorityObj1;
 		((units _priorityGroup) select 0) moveInCommander priorityObj1;

@@ -36,13 +36,11 @@ _targetArray = _targets;
 
 //----------------------------------------------- SELECT A FEW RANDOM AOs
 
-//["FOB_CE","FOB_CE_Hmv","FOB_CE_Hmv_1","FOB_CE_LZ","FOB_CE_Repair","FOB_CE_Medic","FOB_CE_Fuel","FOB_CE_Ammo","FOB_CE_APC","FOB_CE_Supp"] execVM "mission\Fob\FOB_Main.sqf";
+["FOB_main","FOB_main_Hmv","FOB_main_Hmv_1","FOB_main_LZ","FOB_main_Repair","FOB_main_Medic","FOB_main_Fuel","FOB_main_Ammo","FOB_main_APC","FOB_main_Supp"] execVM "mission\Fob\FOB_Main.sqf";
 
 //----------------------------------------------- AO MAIN SEQUENCE
 
 while { count _targetArray > 0 } do {
-	
-	systemChat "Inside Island loop";
 	
 	waitUntil {
 		sleep 5;
@@ -50,7 +48,7 @@ while { count _targetArray > 0 } do {
 		(zuesMission == 0)
 	};
 	
-	systemChat "After zuesMission check";
+	
 	
 	sleep 1;
 

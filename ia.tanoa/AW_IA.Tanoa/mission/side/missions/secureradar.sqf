@@ -122,23 +122,22 @@ while { sideMissionUp } do {
 		hqSideChat = _c4Message;
 		[hqSideChat] remoteExec ["AW_fnc_globalSideChat",0,false];
 	
-		//-------------------- PREPARE BOOM!		
+		//-------------------- BOOM!
+		
 		_dummy setPos [(getPos sideObj select 0), ((getPos sideObj select 1) +5), ((getPos sideObj select 2) + 0.5)];
 		sleep 0.1;
 		_object setPos [-10000,-10000,0];					// hide objective
 		sleep 30;											// ghetto bomb timer
-				
-		//-------------------- DE-BRIEFING
-		[] call QS_fnc_SMhintSUCCESS;
-		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
-		sideMissionUp = false; publicVariable "sideMissionUp";
-		
-		//-------------------- BOOM
-		"Bo_GBU12_LGB" createVehicle getPos _dummy;			// default "Bo_Mk82","Bo_GBU12_LGB"
+		"Bo_Mk82" createVehicle getPos _dummy; 				// default "Bo_Mk82","Bo_GBU12_LGB"
 		_dummy setPos [-10000,-10000,1];					// hide dummy
 		researchTable setPos [-10000,-10000,1];				// hide research table
 		sleep 0.1;
-		
+	
+		//-------------------- DE-BRIEFING
+
+		[] call QS_fnc_SMhintSUCCESS;
+		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
+		sideMissionUp = false; publicVariable "sideMissionUp";
 	
 		//--------------------- DELETE
 		sleep 120;

@@ -25,14 +25,9 @@ if (getPos _hType select 2 > maxLiftingHeight) exitWith {hintSilent "Too high to
 _nearUnits = (getPos _hType) nearEntities [["LandVehicle","Ship"],maxLiftingDistance];
 if (count _nearUnits < 1) exitWith {hintSilent "No sling targets";};
 _liftable = [];
-//Light
-if (_hType isKindOf "RHS_MELB_AH6M_M" || _hType isKindOf "RHS_MELB_AH6M") then {_liftable = light;};
-//medium
-if (_hType isKindOf "RHS_UH60M_d") then {_liftable = light + medium;};
-//heavy
-if (_hType isKindOf "RHS_CH_47F_10" || -htype isKindOf "rhsusf_CH53E_USMC_D") then {_liftable = light + medium + heavy;};
 
-
+if (_hType isKindOf "I_Heli_Transport_02_F") then {_liftable = light + medium + heavy;};
+if (_hType isKindOf "B_Heli_Transport_01_F" || _hType isKindOf "B_Heli_Transport_01_camo_F") then {_liftable = light + medium;};
 _hPos = getPos _hType;
 _hVel = velocity _hType;
 _hPos = [(_hPos select 0) + (_hVel select 0), (_hPos select 1) + (_hVel select 1), (_hPos select 2) + (_hVel select 2)];

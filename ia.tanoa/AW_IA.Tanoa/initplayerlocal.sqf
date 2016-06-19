@@ -31,7 +31,6 @@ for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do {
 //------------------- client executions
 
 _null = [] execvm "scripts\vehicle\crew\crew.sqf"; 								// vehicle HUD
-//_null = [] execVM 'scripts\group_manager.sqf';								// group manager
 _null = [] execVM "scripts\restrictions.sqf"; 									// gear restrictions and safezone
 _null = [] execVM "scripts\pilotCheck.sqf"; 									// pilots only
 _null = [] execVM "scripts\crewCheck.sqf"; 										// tank crew only
@@ -59,13 +58,9 @@ tawvd_disablenone = false;
 //--------------------- Arty Computer and Squad Manager
 
 enableEngineArtillery false;
-if (player isKindOf "rhsusf_army_ocp_fso") then {
+if (player isKindOf "B_support_Mort_f") then {
 	enableEngineArtillery true;
 };
-if (player isKindOf "rhsusf_army_ocp_crewman") then {
-	enableEngineArtillery true;
-};
-
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
 //--------------------- Billboard Image Randomiser

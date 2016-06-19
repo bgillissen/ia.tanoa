@@ -32,14 +32,11 @@ _wasp = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F"];						// MH-9
 _orca = ["O_Heli_Light_02_unarmed_F"];											// Orca
 _mobileArmory = ["B_Truck_01_ammo_F"];											// Mobile Armory
 _noAmmoCargo = ["B_APC_Tracked_01_CRV_F","B_Truck_01_ammo_F"];					// Bobcat CRV
-_slingHeli = ["RHS_MELB_AH6M_M", "RHS_MELB_AH6M", "RHS_UH60M_d", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"]; // sling capable
-//_slingHeli = []; // sling capable
-//_slingable = ["RHS_MELB_AH6M_M", "RHS_MELB_AH6M"];							// slingable
-_slingable = [];																// slingable
-_notSlingable = ["RHS_UH60M_d", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"];		// not slingable
-_dropHeli = ["RHS_UH60M_d", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"];			// drop capable
+_slingHeli = ["I_Heli_Transport_02_F","B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F"];											// sling capable
+_slingable = ["B_Heli_Light_01_F"];												// slingable
+_notSlingable = ["B_Heli_Light_01_armed_F", "B_Heli_Attack_01_F"];				// not slingable
+_dropHeli = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F"]; 			// drop capable
 _uav = ["B_UAV_02_CAS_F","B_UAV_02_F","B_UGV_01_F","B_UGV_01_rcws_F"];			// UAVs
-_buzzard = ["I_Plane_Fighter_03_AA_F"];
 
 //============================================= SORT
 //===== Add to Zeus
@@ -120,10 +117,4 @@ if (_t in _uav) then {
 		sleep 2;
 		createVehicleCrew _u;
 	};
-};
-
-//===== Buzaar Radio
-
-if (_t in _buzzard) then {
-	_u setVariable ["tf_side", "west", true];
 };

@@ -18,7 +18,7 @@ sleep 1;
 ammocheck_switch = false;
 ammoDropCrate = objNull;
 AW_ammoDropAvail = true; publicVariable "AW_ammoDropAvail";
-crossroad disableAI "ANIM";
+//crossroad disableAI "ANIM";
 SHK_fnc_buildingPos02 = compileFinal preprocessFileLineNumbers "functions\SHK_buildingpos02.sqf";
 sleep 1;
 

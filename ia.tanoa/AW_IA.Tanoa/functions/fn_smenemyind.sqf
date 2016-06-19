@@ -16,12 +16,8 @@ ___________________________________________*/
 
 //---------- CONFIG
 
-//#define INF_TEAMS "HAF_InfTeam","HAF_InfTeam_AA","HAF_InfTeam_AT","HAF_InfSentry","HAF_InfSquad"
-//#define VEH_TYPES "I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F","I_MBT_03_cannon_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F"
-
-#define INF_TEAMS "rhsgref_group_cdf_reg_infantry_squad","rhsgref_group_cdf_reg_infantry_squad_weap"
-#define VEH_TYPES "rhsgref_ins_g_uaz_spg9","rhsgref_ins_g_uaz_ags","rhsgref_ins_g_uaz_dshkm_chdkz","rhsgref_BRDM2_ATGM_ins_g","rhsgref_BRDM2_HQ_ins_g","rhsgref_ins_g_t72bc","rhsgref_ins_g_bmd1","rhsgref_ins_g_bmd2","rhsgref_ins_g_bmp2"
-
+#define INF_TEAMS "HAF_InfTeam","HAF_InfTeam_AA","HAF_InfTeam_AT","HAF_InfSentry","HAF_InfSquad"
+#define VEH_TYPES "I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F","I_MBT_03_cannon_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F"
 private ["_x","_pos","_flatPos","_randomPos","_unitsArray","_enemiesArray","_infteamPatrol","_SMvehPatrol","_SMveh","_SMaaPatrol","_SMaa","_indSniperTeam"];
 _enemiesArray = [grpNull];
 _x = 0;
@@ -37,8 +33,7 @@ _SMaaPatrol = createGroup east;
 
 for "_x" from 0 to (2 + (random 4)) do {
 	_randomPos = [[[getPos sideObj, 300],[]],["water","out"]] call BIS_fnc_randomPos;
-	//_infteamPatrol = [_randomPos, EAST, (configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> [INF_TEAMS] call BIS_fnc_selectRandom)] call BIS_fnc_spawnGroup;
-	_infteamPatrol = [_randomPos, EAST, (configfile >> "CfgGroups" >> "Indep" >> "rhsgref_faction_cdf_ground" >> "rhsgref_group_cdf_reg_infantry" >> [INF_TEAMS] call BIS_fnc_selectRandom)] call BIS_fnc_spawnGroup;
+	_infteamPatrol = [_randomPos, EAST, (configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> [INF_TEAMS] call BIS_fnc_selectRandom)] call BIS_fnc_spawnGroup;
 	[_infteamPatrol, getPos sideObj, 100] call BIS_fnc_taskPatrol;
 				
 	_enemiesArray = _enemiesArray + [_infteamPatrol];
@@ -50,7 +45,7 @@ for "_x" from 0 to (2 + (random 4)) do {
 };
 
 //---------- SNIPER
-/* NO GREF sniper or part of a group as marksman
+
 for "_x" from 0 to 1 do {
 	_randomPos = [getPos sideObj, 500, 100, 20] call BIS_fnc_findOverwatch;
 	_indSniperTeam = [_randomPos, EAST, (configfile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_SniperTeam")] call BIS_fnc_spawnGroup;
@@ -64,21 +59,21 @@ for "_x" from 0 to 1 do {
 	} foreach adminCurators;
 
 };
-*/
+
 //---------- RANDOM VEHICLE
 
 _randomPos = [[[getPos sideObj, 300],[]],["water","out"]] call BIS_fnc_randomPos;
 _SMveh = [VEH_TYPES] call BIS_fnc_selectRandom createVehicle _randomPos;
 waitUntil {sleep 0.5; !isNull _SMveh};
-	"rhs_msv_emr_combatcrew" createUnit [_randomPos,_SMvehPatrol];
-	"rhs_msv_emr_combatcrew" createUnit [_randomPos,_SMvehPatrol];
-	//"O_engineer_F" createUnit [_randomPos,_SMvehPatrol];
+	"O_engineer_F" createUnit [_randomPos,_SMvehPatrol];
+	"O_engineer_F" createUnit [_randomPos,_SMvehPatrol];
+	"O_engineer_F" createUnit [_randomPos,_SMvehPatrol];
 	((units _SMvehPatrol) select 0) assignAsDriver _SMveh;
 	((units _SMvehPatrol) select 1) assignAsGunner _SMveh;
-	//((units _SMvehPatrol) select 2) assignAsCommander _SMveh;
+	((units _SMvehPatrol) select 2) assignAsCommander _SMveh;
 	((units _SMvehPatrol) select 0) moveInDriver _SMveh;
 	((units _SMvehPatrol) select 1) moveInGunner _SMveh;
-	//((units _SMvehPatrol) select 2) moveInCommander _SMveh;
+	((units _SMvehPatrol) select 2) moveInCommander _SMveh;
 	
 _SMveh lock 3;
 [_SMvehPatrol, getPos sideObj, 150] call BIS_fnc_taskPatrol;
@@ -99,7 +94,7 @@ _enemiesarray = _enemiesArray + [_SMveh];
 
 for "_x" from 0 to 1 do {
 	_randomPos = [[[getPos sideObj, 300],[]],["water","out"]] call BIS_fnc_randomPos;
-	_SMaa = "rhsgref_ins_g_zsu234" createVehicle _randomPos;
+	_SMaa = "O_APC_Tracked_02_AA_F" createVehicle _randomPos;
 	waitUntil {sleep 0.5; !isNull _SMaa};
 	[_SMaa, _SMaaPatrol] call BIS_fnc_spawnCrew;
 	

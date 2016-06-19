@@ -2,14 +2,16 @@
 // Since then been tweaked by many hands!
 // Notable contributors: chucky [allFPS], Quiksilver.
 
-_helipilots = ["rhsusf_army_ocp_helipilot"];
-_jetpilots = ["rhsusf_airforce_jetpilot"];
+_helipilots = ["B_Helipilot_F","B_helicrew_F","O_Helipilot_F","O_helicrew_F","I_Helipilot_F","I_helicrew_F"];
+_jetpilots = ["B_Pilot_F","O_Pilot_F","I_Pilot_F"];
 
-_aircraft_nocopilot = ["RHS_UH60M_d", 
-					   "RHS_UH60M_MEV2_d",
-					   "RHS_CH_47F_10", 
-					   "rhsusf_CH53E_USMC_D", 
-					   "RHS_MELB_AH6M_M"];
+_aircraft_nocopilot = ["B_Heli_Transport_01_camo_F",
+					   "B_Heli_Transport_01_F",
+					   "I_Heli_Transport_02_F",
+					   "O_Heli_Light_02_F",
+					   "O_Heli_Light_02_unarmed_F",
+					   "B_Heli_Light_01_armed_F",
+					   "B_Heli_Transport_03_F"];
 
 waitUntil {player == player};
 

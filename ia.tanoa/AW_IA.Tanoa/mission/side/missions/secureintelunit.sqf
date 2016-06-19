@@ -19,9 +19,9 @@ Notes / To Do:
 	
 ___________________________________________________________________________*/
 
-#define OBJVEH_TYPES "rhs_uaz_open_MSV_01","rhs_uaz_MSV_01","RHS_Mi8mt_vdv"
-#define ALTVEH_TYPES "rhs_tigr_msv"
-#define OBJUNIT_TYPES "rhs_msv_emr_officer","rhs_msv_flora_officer","rhs_msv_mflora_officer"
+#define OBJVEH_TYPES "O_MRAP_02_F","I_MRAP_03_F","O_MRAP_02_F","C_Offroad_01_F","C_SUV_01_F","C_Van_01_transport_F","O_Heli_Light_02_unarmed_F"
+#define ALTVEH_TYPES "O_MRAP_02_F"
+#define OBJUNIT_TYPES "O_officer_F","I_officer_F","I_Soldier_SL_F","O_Soldier_SL_F","O_recon_TL_F","O_diver_TL_F"
 
 private ["_x","_targetTrigger","_surrenderTrigger","_aGroup","_bGroup","_cGroup","_decoy1","_decoy2","_obj1","_obj2","_obj3","_intelDriver","_decoyDriver1","_decoyDriver2","_intelObj","_enemiesArray","_randomDir","_poi","_flatPos","_flatPos1","_flatPos2","_flatPos3","_position","_accepted","_fuzzyPos","_briefing","_escapeWP","_meetingPos"];
 
@@ -65,7 +65,7 @@ private ["_x","_targetTrigger","_surrenderTrigger","_aGroup","_bGroup","_cGroup"
 	sleep 0.3;
 	
 	[OBJUNIT_TYPES] call BIS_fnc_selectRandom createUnit [_flatPos1, _aGroup];
-	"rhs_msv_emr_driver" createUnit [_flatPos1, _aGroup];
+	"O_crew_F" createUnit [_flatPos1, _aGroup];
 	
 	sleep 0.3;
 	
@@ -86,7 +86,7 @@ private ["_x","_targetTrigger","_surrenderTrigger","_aGroup","_bGroup","_cGroup"
 	sleep 0.3;
 	
 	[OBJUNIT_TYPES] call BIS_fnc_selectRandom createUnit [_flatPos1, _bGroup];
-	"rhs_msv_emr_driver" createUnit [_flatPos1, _bGroup];
+	"O_crew_F" createUnit [_flatPos1, _bGroup];
 	
 	sleep 0.3;
 	
@@ -105,7 +105,7 @@ private ["_x","_targetTrigger","_surrenderTrigger","_aGroup","_bGroup","_cGroup"
 	_obj3 setDir (random 360);
 	sleep 0.3;
 	[OBJUNIT_TYPES] call BIS_fnc_selectRandom createUnit [_flatPos1, _cGroup];
-	"rhs_msv_emr_driver" createUnit [_flatPos1, _cGroup];
+	"O_crew_F" createUnit [_flatPos1, _cGroup];
 	sleep 0.3;
 	
 	_decoy2 = ((units _cGroup) select 0);

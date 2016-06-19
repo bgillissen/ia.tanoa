@@ -7,7 +7,7 @@ Description: Separate crew respawn
 if (PARAMS_CrewRespawn == 0) exitWith {};
 
 _pos = getMarkerPos "respawn_crew";
-_crews = ["rhsusf_army_ocp_crewman"];
+_crews = ["B_crew_F"];
 _iamcrew = ({typeOf player == _x} count _crews) > 0;
 if (_iamcrew) then {
 	player setDir 320;

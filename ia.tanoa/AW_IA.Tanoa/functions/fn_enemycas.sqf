@@ -15,7 +15,7 @@ ______________________________________________________*/
 
 private ["_aoPos","_spawnPos","_jetSelect","_casArray","_jetLimit","_jetPilot","_jetActual","_new"];
 
-_casArray = ["RHS_Su25SM_vvsc","RHS_Su25SM_KH29_vvsc","RHS_Su25SM_CAS_vvsc"];//,"RHS_T50_vvs_generic","RHS_T50_vvs_051","RHS_T50_vvs_052"];
+_casArray = ["O_Plane_CAS_02_F","I_Plane_Fighter_03_AA_F"];
 
 _jetLimit = 1;
 	
@@ -29,7 +29,7 @@ if ((count enemyCasArray) < _jetLimit) then {
 	_aoPos = getMarkerPos currentAO;
 	if (isNull enemyCasGroup) then {enemyCasGroup = createGroup east;};
 	
-	_jetPilot = enemyCasGroup createUnit ["rhs_pilot",[0,0,(1000 + (random 1000))],[],0,"NONE"];
+	_jetPilot = enemyCasGroup createUnit ["O_pilot_F",[0,0,(1000 + (random 1000))],[],0,"NONE"];
 	_jetSelect = _casArray select (floor (random (count _casArray)));
 	_jetActual = createVehicle [_jetSelect,_spawnPos,[],0,"NONE"];
 	waitUntil {!isNull _jetActual};
@@ -57,7 +57,6 @@ if ((count enemyCasArray) < _jetLimit) then {
 		_jetActual = _this select 0;
 		_jetPilot = _this select 1;
 		showNotification = ["EnemyJet","Enemy jet approaching!"]; publicVariable "showNotification";
-		showNotification remoteExec ["AW_fnc_globalNotification",0,false];
 		while {(alive _jetActual)} do {
 			_jetActual setVehicleAmmo 1;
 			_jetActual flyInHeight (200 + (random 850));
@@ -67,7 +66,6 @@ if ((count enemyCasArray) < _jetLimit) then {
 			sleep 60;
 		};
 		showNotification = ["EnemyJetDown","Enemy CAS is down. Well Done!"]; publicVariable "showNotification";
-		showNotification remoteExec ["AW_fnc_globalNotification",0,false];
 		enemyCasArray = enemyCasArray - [_jetActual];
 		sleep 30;
 		if (!isNull _jetActual) then {deleteVehicle _jetActual;};

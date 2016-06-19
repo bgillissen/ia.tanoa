@@ -25,7 +25,7 @@ if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
 
 //=========================== PILOTS ONLY
 
-_helipilots = ["rhsusf_army_ocp_helipilot"];
+_helipilots = ["B_Helipilot_F","B_helicrew_F","O_Helipilot_F","O_helicrew_F","I_Helipilot_F","I_helicrew_F"];
 _iamhelipilot = ({typeOf player == _x} count _helipilots) > 0;
 if (_iamhelipilot) then {
 	//===== FAST ROPE
@@ -76,7 +76,6 @@ inventory_cleared = FALSE;
 player setVariable ["seated",FALSE];
 player addAction ["Clear vehicle inventory",QS_fnc_actionClearInventory,[],-97,FALSE,FALSE,'','[] call QS_fnc_conditionClearInventory'];
 
-/*
 //======================= Remove any rf7800str radio and give a anprc152 instead
 	for "_i" from 1 to 999 do {
 		scopeName "radioLoop";
@@ -116,4 +115,3 @@ player addAction ["Clear vehicle inventory",QS_fnc_actionClearInventory,[],-97,F
 	};
 //======================= Auto Earplugs
 _null = [] execVM "scripts\vas\earplugs.sqf";
-*/
