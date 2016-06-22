@@ -5,7 +5,7 @@
 _helipilots = ["B_Helipilot_F","B_helicrew_F","O_Helipilot_F","O_helicrew_F","I_Helipilot_F","I_helicrew_F"];
 _jetpilots = ["B_Pilot_F","O_Pilot_F","I_Pilot_F"];
 
-_aircraft_nocopilot = ["B_Heli_Transport_01_camo_F",
+_heli_nocopilot = ["B_Heli_Transport_01_camo_F",
 					   "B_CTRG_Heli_Transport_01_tropic_F",
 					   "B_Heli_Transport_01_F",
 					   "I_Heli_Transport_02_F",
@@ -31,7 +31,7 @@ while { true } do {
 		_veh = vehicle player;
 		//------------------------------ only helipilot
 		if((_veh isKindOf "Helicopter") && !(_veh isKindOf "ParachuteBase")) then {
-			if(({typeOf _veh == _x} count _aircraft_nocopilot) > 0) then {
+			if(({typeOf _veh == _x} count _heli_nocopilot) > 0) then {
 				_forbidden = [_veh turretUnit [0]];
 				if(player in _forbidden) then {
 					if (!_iamhelipilot) then {
@@ -51,6 +51,13 @@ while { true } do {
 		//------------------------------ only jetpilot
 		if((_veh isKindOf "Plane") && !(_veh isKindOf "ParachuteBase")) then {
 			if(!_iamjetpilot) then {
+				_forbidden = [_veh turretUnit [0]];
+				if(player in _forbidden) then {
+					if (!_iamjetpilot) then {
+						systemChat "Co-pilot is disabled on this aircraft";
+						player action ["getOut",_veh];
+					};
+				};
 				_forbidden = [driver _veh];
 				if (player in _forbidden) then {
 					systemChat "You must be a jet pilot to fly this aircraft";

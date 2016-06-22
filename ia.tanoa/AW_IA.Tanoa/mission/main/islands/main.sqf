@@ -46,7 +46,10 @@ _targets = ["Georgetown",
 			"Jungle", 
 			"Lobaka", 
 			"Lakatoro", 
-			"Cocoa plantations"];
+			"Cocoa plantations",
+			"Tanoa Airfield",
+			"Railway Depot",
+			"Diesel power plant"];
 
 
 _target1 = _targets call BIS_fnc_selectRandom;
