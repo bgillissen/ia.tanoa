@@ -2,6 +2,8 @@
 // Since then been tweaked by many hands!
 // Notable contributors: chucky [allFPS], Quiksilver.
 
+private ["_cfg", "_trts", "_trt"];
+
 _helipilots = ["B_Helipilot_F","B_helicrew_F","O_Helipilot_F","O_helicrew_F","I_Helipilot_F","I_helicrew_F"];
 _jetpilots = ["B_Pilot_F","O_Pilot_F","I_Pilot_F"];
 
@@ -13,6 +15,9 @@ _heli_nocopilot = ["B_Heli_Transport_01_camo_F",
 					   "O_Heli_Light_02_unarmed_F",
 					   "B_Heli_Light_01_armed_F",
 					   "B_Heli_Transport_03_F"];
+_jet_nocopilot = ["B_T_VTOL_01_armed_F",
+				  "B_T_VTOL_01_infantry_F",
+				  "B_T_VTOL_01_vehicle_F"];
 
 waitUntil {player == player};
 
@@ -51,11 +56,15 @@ while { true } do {
 		//------------------------------ only jetpilot
 		if((_veh isKindOf "Plane") && !(_veh isKindOf "ParachuteBase")) then {
 			if(!_iamjetpilot) then {
-				_forbidden = [_veh turretUnit [0]];
-				if(player in _forbidden) then {
-					if (!_iamjetpilot) then {
-						systemChat "Co-pilot is disabled on this aircraft";
-						player action ["getOut",_veh];
+				if(({typeOf _veh == _x} count _jet_nocopilot) > 0) then {
+					_cfg = configFile >> "CfgVehicles" >> typeOf(_veh);
+					_trts = _cfg >> "turrets";
+					for "_i" from 0 to (count _trts - 1) do {
+						_trt = _trts select _i;
+						if( getNumber(_trt >> "iscopilot") == 1) then {
+							systemChat "Co-pilot is disabled on this aircraft";
+							player action ["getOut", _veh];
+						};
 					};
 				};
 				_forbidden = [driver _veh];
