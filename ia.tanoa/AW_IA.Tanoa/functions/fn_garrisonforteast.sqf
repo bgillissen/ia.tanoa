@@ -176,7 +176,7 @@
 
 	_newGrp = createGroup EAST;
 
-	_units = ["O_Soldier_GL_F", "O_Soldier_AR_F"];
+	_units = ["O_T_Soldier_GL_F", "O_T_Soldier_AR_F"];
 
 	{
 		_pos =  [_building, _x select 1, (_x select 0) + direction _building] call BIS_fnc_relPos;

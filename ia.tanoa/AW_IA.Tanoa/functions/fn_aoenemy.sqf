@@ -14,12 +14,19 @@ Description:
 __________________________________________________________________*/
 
 //---------- CONFIG
-
+/*
 #define INF_TYPE "OIA_InfSentry","OIA_InfSquad","OIA_InfSquad_Weapons","OIA_InfTeam","OIA_InfTeam_AA","OIA_InfTeam_AT","OI_reconPatrol","OI_reconSentry","OI_reconTeam"
 #define INF_URBANTYPE "OIA_GuardSentry","OIA_GuardSquad","OIA_GuardTeam"
 #define MRAP_TYPE "O_MRAP_02_gmg_F","O_MRAP_02_hmg_F"
 #define VEH_TYPE "O_MBT_02_cannon_F","O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_F","O_APC_Tracked_02_cannon_F","I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F","I_MBT_03_cannon_F"
 #define AIR_TYPE "O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","I_Heli_light_03_F","O_Heli_Light_02_F"
+#define STATIC_TYPE "O_HMG_01_F","O_HMG_01_high_F","O_Mortar_01_F"
+*/
+#define INF_TYPE "O_T_InfSentry","O_T_InfSquad","O_T_InfSquad_Weapons","O_T_InfTeam","O_T_InfTeam_AA","O_T_InfTeam_AT","O_T_reconPatrol","O_T_reconSentry"
+#define INF_URBANTYPE "O_T_ViperTeam"
+#define MRAP_TYPE "O_T_MRAP_02_hmg_ghex_F","O_T_MRAP_02_gmg_ghex_F","O_T_LSV_02_armed_F"
+#define VEH_TYPE "O_T_MBT_02_cannon_ghex_F","O_T_APC_Tracked_02_cannon_ghex_F","O_T_APC_Wheeled_02_rcws_ghex_F","O_T_APC_Tracked_02_AA_ghex_F","I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F","I_MBT_03_cannon_F"
+#define AIR_TYPE "O_T_VTOL_02_infantry_F","O_Heli_Attack_02_black_F","I_Heli_light_03_F","O_Heli_Light_02_F"
 #define STATIC_TYPE "O_HMG_01_F","O_HMG_01_high_F","O_Mortar_01_F"
 
 private ["_enemiesArray","_randomPos","_patrolGroup","_AOvehGroup","_AOveh","_AOmrapGroup","_AOmrap","_pos","_spawnPos","_overwatchGroup","_x","_staticGroup","_static","_aaGroup","_aa","_airGroup","_air","_sniperGroup","_staticDir"];
@@ -27,11 +34,11 @@ _pos = getMarkerPos (_this select 0);
 _enemiesArray = [grpNull];
 _x = 0;
 //---------- AA VEHICLE
-	
+
 for "_x" from 1 to PARAMS_AAPatrol do {
 	_aaGroup = createGroup east;
 	_randomPos = [[[getMarkerPos currentAO, (PARAMS_AOSize / 2)],[]],["water","out"]] call BIS_fnc_randomPos;
-	_aa = "O_APC_Tracked_02_AA_F" createVehicle _randomPos;
+	_aa = "O_T_APC_Tracked_02_AA_ghex_F" createVehicle _randomPos;
 	waitUntil{!isNull _aa};
 	_aa allowCrewInImmobile true;
 		"O_engineer_F" createUnit [_randomPos,_aaGroup];
@@ -62,7 +69,7 @@ for "_x" from 1 to PARAMS_AAPatrol do {
 for "_x" from 1 to PARAMS_GroupPatrol do {
 	_patrolGroup = createGroup east;
 	_randomPos = [[[getMarkerPos currentAO, (PARAMS_AOSize / 1.2)],[]],["water","out"]] call BIS_fnc_randomPos;
-	_patrolGroup = [_randomPos, EAST, (configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> [INF_TYPE] call BIS_fnc_selectRandom)] call BIS_fnc_spawnGroup;
+	_patrolGroup = [_randomPos, EAST, (configfile >> "CfgGroups" >> "East" >> "OPF_T_F" >> "Infantry" >> [INF_TYPE] call BIS_fnc_selectRandom)] call BIS_fnc_spawnGroup;
 	[_patrolGroup, getMarkerPos currentAO, 400] call BIS_fnc_taskPatrol;
 
 	_enemiesArray = _enemiesArray + [_patrolGroup];
@@ -104,7 +111,7 @@ for "_x" from 1 to PARAMS_StaticMG do {
 for "_x" from 1 to PARAMS_Overwatch do {
 	_overwatchGroup = createGroup east;
 	_randomPos = [getMarkerPos currentAO, 600, 50, 10] call BIS_fnc_findOverwatch;
-	_overwatchGroup = [_randomPos, East, (configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "UInfantry" >> [INF_URBANTYPE] call BIS_fnc_selectRandom)] call BIS_fnc_spawnGroup;
+	_overwatchGroup = [_randomPos, East, (configfile >> "CfgGroups" >> "East" >> "OPF_T_F" >> "SpecOps" >> [INF_URBANTYPE] call BIS_fnc_selectRandom)] call BIS_fnc_spawnGroup;
 	[_overwatchGroup, _randomPos, 100] call BIS_fnc_taskPatrol;
 
 	_enemiesArray = _enemiesArray + [_overwatchGroup];
@@ -122,9 +129,9 @@ for "_x" from 0 to 1 do {
 	_randomPos = [[[getMarkerPos currentAO, PARAMS_AOSize],[]],["water","out"]] call BIS_fnc_randomPos;
 	_AOmrap = [MRAP_TYPE] call BIS_fnc_selectRandom createVehicle _randomPos;
 	waitUntil {!isNull _AOmrap};
-		"O_engineer_F" createUnit [_randomPos,_AOmrapGroup];
-		"O_engineer_F" createUnit [_randomPos,_AOmrapGroup];
-		"O_engineer_F" createUnit [_randomPos,_AOmrapGroup];
+		"O_T_engineer_F" createUnit [_randomPos,_AOmrapGroup];
+		"O_T_engineer_F" createUnit [_randomPos,_AOmrapGroup];
+		"O_T_engineer_F" createUnit [_randomPos,_AOmrapGroup];
 		((units _AOmrapGroup) select 0) assignAsDriver _AOmrap;
 		((units _AOmrapGroup) select 0) moveInDriver _AOmrap;
 		((units _AOmrapGroup) select 1) assignAsGunner _AOmrap;
@@ -159,9 +166,9 @@ for "_x" from 0 to (3 + (random 2)) do {
 	if (random 1 >= 0.25) then {
 		_AOveh allowCrewInImmobile true;
 	};
-		"O_engineer_F" createUnit [_randomPos,_AOvehGroup];
-		"O_engineer_F" createUnit [_randomPos,_AOvehGroup];
-		"O_engineer_F" createUnit [_randomPos,_AOvehGroup];
+		"O_T_engineer_F" createUnit [_randomPos,_AOvehGroup];
+		"O_T_engineer_F" createUnit [_randomPos,_AOvehGroup];
+		"O_T_engineer_F" createUnit [_randomPos,_AOvehGroup];
 		((units _AOvehGroup) select 0) assignAsDriver _AOveh;
 		((units _AOvehGroup) select 0) moveInDriver _AOveh;
 		((units _AOvehGroup) select 1) assignAsGunner _AOveh;
@@ -202,10 +209,10 @@ if((random 10 <= PARAMS_AirPatrol)) then {
 		};
 	};
 
-		"O_helipilot_F" createUnit [_randomPos,_airGroup];
+		"O_T_helipilot_F" createUnit [_randomPos,_airGroup];
 		((units _airGroup) select 0) assignAsDriver _air;
 		((units _airGroup) select 0) moveInDriver _air;
-		"O_helipilot_F" createUnit [_randomPos,_airGroup];
+		"O_T_helipilot_F" createUnit [_randomPos,_airGroup];
 		((units _airGroup) select 1) assignAsGunner _air;
 		((units _airGroup) select 1) moveInGunner _air;
 
@@ -231,7 +238,7 @@ if((random 10 <= PARAMS_AirPatrol)) then {
 for "_x" from 1 to PARAMS_SniperTeamsPatrol do {
 	_sniperGroup = createGroup east;
 	_randomPos = [getMarkerPos currentAO, 1200, 100, 10] call BIS_fnc_findOverwatch;
-	_sniperGroup = [_randomPos, EAST,(configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> "OI_SniperTeam")] call BIS_fnc_spawnGroup;
+	_sniperGroup = [_randomPos, EAST,(configfile >> "CfgGroups" >> "East" >> "OPF_T_F" >> "Infantry" >> "O_T_SniperTeam")] call BIS_fnc_spawnGroup;
 	_sniperGroup setBehaviour "COMBAT";
 	_sniperGroup setCombatMode "RED";
 		
@@ -297,8 +304,8 @@ if (random 1 >= 0.5) then {
 [(units _staticGroup)] call QS_fnc_setSkill3;
 [(units _aaGroup)] call QS_fnc_setSkill4;
 	
-//---------- GARRISON FORTIFICATIONS	
-/*	
+//---------- GARRISON FORTIFICATIONS
+	
 {
 	_newGrp = [_x] call QS_fnc_garrisonFortEAST;
 	if (!isNull _newGrp) then { 
@@ -308,5 +315,5 @@ if (random 1 >= 0.5) then {
 		_x addCuratorEditableObjects [units _newGrp, false];
 	} forEach adminCurators;		
 } forEach (getMarkerPos currentAO nearObjects ["House", 800]);
-*/
+
 _enemiesArray;
