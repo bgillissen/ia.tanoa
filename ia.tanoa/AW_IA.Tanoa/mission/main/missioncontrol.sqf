@@ -24,6 +24,7 @@ _missionList = [
 	"saintgeorge",
 	"sosovu",
 	"tuvanaka",
+	"bala",
 	"main"
 ];
 
