@@ -57,15 +57,24 @@ while { true } do {
 		if((_veh isKindOf "Plane") && !(_veh isKindOf "ParachuteBase")) then {
 			if(!_iamjetpilot) then {
 				if(({typeOf _veh == _x} count _jet_nocopilot) > 0) then {
+					/*
 					_cfg = configFile >> "CfgVehicles" >> typeOf(_veh);
 					_trts = _cfg >> "turrets";
 					for "_i" from 0 to (count _trts - 1) do {
 						_trt = _trts select _i;
-						if( getNumber(_trt >> "iscopilot") == 1) then {
+						if( (getNumber(_trt >> "iscopilot") == 1) && (_veh turretUnit [_i] == player) )then {
 							systemChat "Co-pilot is disabled on this aircraft";
 							player action ["getOut", _veh];
 						};
 					};
+					*/
+					_forbidden = [_veh turretUnit [0]];
+					if(player in _forbidden) then {
+						if (!_iamjetpilot) then {
+							systemChat "Co-pilot is disabled on this aircraft";
+							player action ["getOut",_veh];
+					};
+				};
 				};
 				_forbidden = [driver _veh];
 				if (player in _forbidden) then {
