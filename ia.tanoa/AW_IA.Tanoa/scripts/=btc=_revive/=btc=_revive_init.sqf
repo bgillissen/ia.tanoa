@@ -120,7 +120,8 @@ if (!isDedicated) then {
 	BTC_Medical_Trucks = ["B_Truck_01_medical_F",
 						  "O_Truck_03_medical_F",
 						  "I_Truck_02_medical_F",
-						  "O_Truck_02_medical_F"
+						  "O_Truck_02_medical_F",
+						  "B_T_Truck_01_medical_F"
 						 ];
 	BTC_Medical_Trucks_addActionText = "First Aid (Medical Vehicle)";		// addAction text displayed when reviving someone near medical truck
 };	
