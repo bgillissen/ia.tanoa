@@ -37,6 +37,7 @@ _slingable = ["B_Heli_Light_01_F"];												// slingable
 _notSlingable = ["B_Heli_Light_01_armed_F", "B_Heli_Attack_01_F"];				// not slingable
 _dropHeli = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F"]; 			// drop capable
 _uav = ["B_UAV_02_CAS_F","B_UAV_02_F","B_UGV_01_F","B_UGV_01_rcws_F"];			// UAVs
+_buzzard = ["I_Plane_Fighter_03_AA_F"];
 
 //============================================= SORT
 //===== Add to Zeus
@@ -117,4 +118,11 @@ if (_t in _uav) then {
 		sleep 2;
 		createVehicleCrew _u;
 	};
+};
+
+
+//===== Buzaar Radio
+
+if (_t in _buzzard) then {
+	_u setVariable ["tf_side", "west", true];
 };
