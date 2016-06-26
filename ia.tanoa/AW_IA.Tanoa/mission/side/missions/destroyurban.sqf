@@ -35,7 +35,7 @@ private ["_object","_briefing","_smPos","_c4Message"];
 
 //-------------------- SPAWN GUARDS and CIVILIANS
 	//was 5
-	[[currentSM],[6,1],[7,1],[0,0],[0],[0],[0,0],[6,1,1200,EAST,FALSE,FALSE]] call EOS_Spawn; //insurgent
+	[[currentSM],[6,1],[7,1],[0,0],[0],[0],[0,0],[5,1,1200,EAST,FALSE,FALSE]] call EOS_Spawn; //insurgent
 	sleep 1;
 	[[currentSM],[3,1],[4,1],[0,0],[0],[0],[0,0],[3,1,1100,EAST,FALSE,FALSE]] call EOS_Spawn; //civs
 
