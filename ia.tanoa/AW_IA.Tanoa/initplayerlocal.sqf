@@ -58,7 +58,7 @@ tawvd_disablenone = false;
 //--------------------- Arty Computer and Squad Manager
 
 enableEngineArtillery false;
-if (player isKindOf "B_support_Mort_f") then {
+if (player isKindOf ""B_crew_F") then {
 	enableEngineArtillery true;
 };
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
