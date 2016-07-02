@@ -33,7 +33,7 @@ _targets = ["Bala Airstrip",
 			"Lailai", 
 			"Koumac", 
 			"Comm Tower", 
-			"Yamukka"];
+			"Yanukka"];
 
 _target1 = _targets call BIS_fnc_selectRandom;
 _targets = _targets - [_target1];
