@@ -88,7 +88,7 @@ _email = _infoSquad select 2;
 
 
 // replace line below with your Squad xml's email
-if (_email == "hello@taskforceunicorn.com") then {
+if (_email == "rainman@taskforceunicorn.com") then {
 
 _GlobalHint = format["<t align='center' size='2.2' color='#FAAF3A'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To become a TFU member, apply to taskforceunicorn.com</t><br/>",_squad,_name];
 
