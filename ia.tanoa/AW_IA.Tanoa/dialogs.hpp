@@ -165,6 +165,16 @@ class Rule_11: RscText
 	h = 0.08;
 	SizeEx = 0.03700;
 };
+class Rule_12: RscText
+{
+	idc = 1019;
+	text = "11. Stick to english only on this server."; //--- ToDo: Localize;
+	x = 1;
+	y = 0.65;
+	w = 0.725;
+	h = 0.08;
+	SizeEx = 0.03700;
+};
 class AW_Intro_and_TS_picture: RscPicture
 {
 	idc = 1200;
