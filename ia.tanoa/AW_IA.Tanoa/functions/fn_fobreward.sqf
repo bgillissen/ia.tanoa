@@ -2,7 +2,6 @@
 
 smRewards =
 [
-	["an AH-9 Pawnee GMG - 20MM", "B_Heli_Light_01_armed_F"],
 	["an Armed Blackfish", "B_T_VTOL_01_armed_F"],
 	["a Blackfoot", "B_Heli_Attacj_01_F"],
 	["an FV-720 Mora", "I_APC_tracked_03_cannon_F"],
