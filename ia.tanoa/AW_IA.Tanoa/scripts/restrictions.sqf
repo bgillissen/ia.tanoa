@@ -36,15 +36,13 @@ _missileSpecialised = ["launch_NLAW_F",
                        "launch_B_Titan_F",
                        "launch_B_Titan_tna_F",
                        "launch_O_Titan_F",
-                       "launch_O_Titan_tna_F",
                        "launch_O_Titan_ghex_F",
                        "launch_I_Titan_F",
                        "launch_B_Titan_short_F",
                        "launch_B_Titan_short_tna_F",
                        "launch_O_Titan_short_F",
-                       "launch_O_Titan_short_tna_F",
                        "launch_O_Titan_short_ghex_F",
-                       "launch_I_Titan_short_F",
+                       "launch_I_Titan_short_F"
                        ];
 //===== SNIPER RIFLES
 _snipers = ["B_sniper_F","B_officer_F"];
