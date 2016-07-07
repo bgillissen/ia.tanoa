@@ -44,3 +44,11 @@ BACO_ammoSuppAvail = true; publicVariable "BACO_ammoSuppAvail";
 _skips = [1,2,3,4,5,6,7,8,9,10,11,12];
 _skipTo = _skips call BIS_fnc_selectRandom;
 skipTime _skipTo;
+
+//-------------------------------------------------- Independent enemy to BLUFOR and friendly to OPFOR
+
+independent setFriend [east, 1];
+east setFriend [independent, 1];
+
+independent setFriend [west, 0];
+west setFriend [independent, 0];
