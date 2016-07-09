@@ -3,7 +3,7 @@
 smRewards =
 [
 	["an Armed Blackfish", "B_T_VTOL_01_armed_F"],
-	["a Blackfoot", "B_Heli_Attacj_01_F"],
+	["a Blackfoot", "B_Heli_Attack_01_F"],
 	["an FV-720 Mora", "I_APC_tracked_03_cannon_F"],
 	["an AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F"],
 	["an AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F"],
@@ -16,7 +16,6 @@ smRewards =
 	["a PO-30 Orca", "O_Heli_Light_02_F"],
 	["a WY-55 Hellcat", "I_Heli_light_03_F"],
 	["an AH-9 Pawnee", "B_Heli_Light_01_armed_F"],
-	["an AH-9 Pawnee GAU - 19", "Rabbit_F"],
 	["an IFV-6a Cheetah", "B_APC_Tracked_01_AA_F"],
 	["an AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F"],
 	["a Strider HMG", "I_MRAP_03_hmg_F"],
