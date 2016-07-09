@@ -24,7 +24,8 @@ private ["_opticsAllowed","_specialisedOptics","_optics","_basePos","_firstRun",
 _uavOperator = ["B_soldier_UAV_F", "B_officer_F"];
 _uavRestricted = ["B_UavTerminal", 
                   "O_UavTerminal", 
-                  "I_UavTerminal"];
+                  "I_UavTerminal"
+                  ];
 //===== AT-AA / MISSILE LAUNCHERS (excl RPG)
 _missileSoldiers = ["B_soldier_LAT_F",
 					"B_soldier_AA_F",
@@ -108,7 +109,8 @@ _backpackRestricted = ["O_Mortar_01_support_F",
                        "I_AT_01_weapon_F",
                        "O_AT_01_weapon_F",
                        "I_AA_01_weapon_F",
-                       "O_AA_01_weapon_F"];
+                       "O_AA_01_weapon_F"
+                       ];
 //===== LMG
 _autoRiflemen = ["B_soldier_AR_F",
 				 "B_officer_F"
