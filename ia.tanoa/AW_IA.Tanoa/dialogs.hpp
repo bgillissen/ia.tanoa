@@ -168,7 +168,7 @@ class Rule_11: RscText
 class Rule_12: RscText
 {
 	idc = 1019;
-	text = "11. Stick to english only on this server."; //--- ToDo: Localize;
+	text = "12. Stick to english only on this server."; //--- ToDo: Localize;
 	x = 1;
 	y = 0.65;
 	w = 0.725;
