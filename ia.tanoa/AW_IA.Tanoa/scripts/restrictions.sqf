@@ -176,7 +176,10 @@ _marksmanGun = ["srifle_DMR_02_ACO_F",
                 "srifle_DMR_06_olive_F",
                 "srifle_DMR_07_blk_F",
                 "srifle_DMR_07_ghex_F",
-                "srifle_DMR_07_hex_F"
+                "srifle_DMR_07_hex_F",
+                "arifle_SPAR_03_blk_F",
+                "arifle_SPAR_03_khk_F",
+                "arifle_SPAR_03_snd_F"
                 ];
 
 
