@@ -55,9 +55,15 @@ _sniperSpecialised = ["srifle_GM6_F",
                       "srifle_GM6_camo_F",
                       "srifle_GM6_camo_LRPS_F",
                       "srifle_GM6_camo_SOS_F",
+                      "srifle_GM6_ghex_F",
+                      "srifle_GM6_ghex_LRPS_F",
+                      "srifle_GM6_ghex_SOS_F",
                       "srifle_LRR_camo_F",
                       "srifle_LRR_camo_LRPS_F",
-                      "srifle_LRR_camo_SOS_F"
+                      "srifle_LRR_camo_SOS_F",
+                      "srifle_LRR_tna_F",
+                      "srifle_LRR_tna_LRPS_F",
+                      "srifle_LRR_tna_SOS_F"
                      ];
 //===== SNIPER OPTICS
 _sniperTeam = ["B_sniper_F",
@@ -115,7 +121,13 @@ _autoSpecialised = ["MMG_02_black_F",
                     "MMG_01_base_F",
                     "MMG_01_hex_F",
                     "MMG_01_hex_ARCO_LP_F",
-                    "MMG_01_tan_F"
+                    "MMG_01_tan_F",
+                    "LMG_03_F",
+                    "LMG_Mk200_F",
+                    "LMG_Zafir_F",
+                    "arifle_SPAR_02_snd_F",
+                    "arifle_SPAR_02_khk_F",
+                    "arifle_SPAR_02_blk_F"
                    ];
 
 //===== MARKSMAN
@@ -161,7 +173,10 @@ _marksmanGun = ["srifle_DMR_02_ACO_F",
                 "srifle_DMR_05_tan_f",
                 "srifle_DMR_06_camo_F",
                 "srifle_DMR_06_camo_khs_F",
-                "srifle_DMR_06_olive_F"
+                "srifle_DMR_06_olive_F",
+                "srifle_DMR_07_blk_F",
+                "srifle_DMR_07_ghex_F",
+                "srifle_DMR_07_hex_F"
                 ];
 
 
