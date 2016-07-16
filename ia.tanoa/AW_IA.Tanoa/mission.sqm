@@ -1251,8 +1251,8 @@ class Mission
 		class Item54
 		{
 			dataType="Marker";
-			position[]={12527.353,-1.7749051e-009,7529.5298};
-			name="Ouméré";
+			position[]={12527.353,-1.6018842e-024,7529.5298};
+			name="Oumere";
 			type="Empty";
 			id=836;
 			atlOffset=-38.351997;
@@ -1563,8 +1563,8 @@ class Mission
 		class Item88
 		{
 			dataType="Marker";
-			position[]={10212.646,-3.2685621e-010,4992.0659};
-			name="Lösi";
+			position[]={10212.646,-2.2057509e-015,4992.0659};
+			name="Losi";
 			type="Empty";
 			id=870;
 			atlOffset=-9.8519039;
@@ -1653,8 +1653,8 @@ class Mission
 		class Item98
 		{
 			dataType="Marker";
-			position[]={12666.553,-2.4111395e-023,3334.344};
-			name="Port-Boisé";
+			position[]={12666.553,-4.7040253e-034,3334.344};
+			name="Port-Boise";
 			type="Empty";
 			id=880;
 			atlOffset=-16.670658;

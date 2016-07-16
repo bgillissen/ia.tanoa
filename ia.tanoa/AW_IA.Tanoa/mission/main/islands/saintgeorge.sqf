@@ -21,7 +21,7 @@ eastSide = createCenter east;
 
 //---------------------------------------------- AO location marker array
 _targets = ["Harcourt", 
-			"Lösi", 
+			"Losi", 
 			"Moddergat", 
 			"La Foa", 
 			"Tobakoro",
@@ -31,7 +31,7 @@ _targets = ["Harcourt",
 			"Rereki", 
 			"Bua Bua", 
 			"Fortress ruins",
-			"Port-Boisé", 
+			"Port-Boise", 
 			"forest clearing", 
 			"Saioko",
 			"Doodstil", 
