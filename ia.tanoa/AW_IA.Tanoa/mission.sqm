@@ -52,6 +52,7 @@ addons[]=
 	"A3_Weapons_F_Exp_Rifles_SPAR_03",
 	"A3_Characters_F_Heads",
 	"A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
+	"Ares",
 	"A3_Drones_F_Weapons_F_Gamma_Items",
 	"A3_Weapons_F_Pistols_P07",
 	"A3_Structures_F_Walls",
@@ -111,7 +112,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=40;
+		items=41;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -203,187 +204,192 @@ class AddonsMetaData
 		};
 		class Item13
 		{
+			className="Ares";
+			name="Ares";
+		};
+		class Item14
+		{
 			className="A3_Drones_F";
 			name="Arma 3 Beta - Drones";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item15
+		class Item16
 		{
 			className="A3_Data_F_Curator";
 			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item16
+		class Item17
 		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item17
+		class Item18
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item18
+		class Item19
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item19
+		class Item20
 		{
 			className="A3_Props_F_Exp_A";
 			name="Arma 3 Nexus Update - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item20
+		class Item21
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item21
+		class Item22
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item22
+		class Item23
 		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item23
+		class Item24
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item24
+		class Item25
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item25
+		class Item26
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item26
+		class Item27
 		{
 			className="A3_Air_F_Exp";
 			name="Arma 3 Apex - Aircrafts";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item27
+		class Item28
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item28
+		class Item29
 		{
 			className="A3_Air_F_EPC";
 			name="Arma 3 Win Episode - Aircrafts";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item29
+		class Item30
 		{
 			className="A3_Air_F_Gamma";
 			name="Arma 3 - Aircrafts";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item30
+		class Item31
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item31
+		class Item32
 		{
 			className="A3_Armor_F_Exp";
 			name="Arma 3 Apex - Armored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item32
+		class Item33
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item33
+		class Item34
 		{
 			className="A3_Armor_F_Beta";
 			name="Arma 3 Beta - Armored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item34
+		class Item35
 		{
 			className="A3_Boat_F_Exp";
 			name="Arma 3 Apex - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item35
+		class Item36
 		{
 			className="A3_Boat_F_Beta";
 			name="Arma 3 Beta - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item36
+		class Item37
 		{
 			className="A3_Boat_F";
 			name="Arma 3 Alpha - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item37
+		class Item38
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item38
+		class Item39
 		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircrafts";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item39
+		class Item40
 		{
 			className="A3_Structures_F_Mark";
 			name="Arma 3 Marksmen - Buildings and Structures";
@@ -1335,11 +1341,11 @@ class Mission
 		class Item64
 		{
 			dataType="Marker";
-			position[]={5734.6782,-1.4184689e-008,12298.813};
-			name="Oua-Oué";
+			position[]={5734.6782,-4.8966307e-005,12298.813};
+			name="Oua-Oue";
 			type="Empty";
 			id=846;
-			atlOffset=-25.821569;
+			atlOffset=-25.821619;
 		};
 		class Item65
 		{
@@ -25709,6 +25715,7 @@ class Mission
 			};
 			id=1581;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item528
 		{
@@ -25725,6 +25732,7 @@ class Mission
 			};
 			id=1582;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item529
 		{
@@ -25741,6 +25749,7 @@ class Mission
 			};
 			id=1583;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item530
 		{
@@ -25757,6 +25766,7 @@ class Mission
 			};
 			id=1584;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item531
 		{
@@ -25773,6 +25783,7 @@ class Mission
 			};
 			id=1585;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item532
 		{
@@ -25789,6 +25800,7 @@ class Mission
 			};
 			id=1586;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item533
 		{
@@ -25805,6 +25817,7 @@ class Mission
 			};
 			id=1587;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item534
 		{
@@ -25821,6 +25834,7 @@ class Mission
 			};
 			id=1588;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item535
 		{
@@ -25837,6 +25851,7 @@ class Mission
 			};
 			id=1589;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item536
 		{
@@ -25853,6 +25868,7 @@ class Mission
 			};
 			id=1590;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item537
 		{
@@ -25869,6 +25885,7 @@ class Mission
 			};
 			id=1591;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item538
 		{
@@ -25885,6 +25902,7 @@ class Mission
 			};
 			id=1592;
 			type="Land_CncWall4_F";
+			atlOffset=-9.5367432e-007;
 		};
 	};
 	class Connections
