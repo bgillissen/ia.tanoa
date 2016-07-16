@@ -61,6 +61,9 @@ enableEngineArtillery false;
 if (player isKindOf "B_crew_F") then {
 	enableEngineArtillery true;
 };
+if (player isKindOf "B_support_Mort_F") then {
+	enableEngineArtillery true;
+};
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
 //--------------------- Billboard Image Randomiser
