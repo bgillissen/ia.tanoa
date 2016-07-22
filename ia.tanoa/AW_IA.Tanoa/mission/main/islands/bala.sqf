@@ -23,7 +23,7 @@ eastSide = createCenter east;
 _targets = ["Bala Airstrip", 
 			"Leqa", 
 			"Cerebu", 
-			"Muacela", 
+			"Muaceba", 
 			"Balavu", 
 			"Rautake", 
 			"Laikoro", 

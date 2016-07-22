@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1623;
+		nextID=1624;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2519.0503,49.303192,13762.546};
-		dir[]={0.45686868,-0.4595876,-0.76177227};
-		up[]={0.2363755,0.8881374,-0.39412591};
-		aside[]={-0.85772389,1.4128746e-006,-0.51440763};
+		pos[]={5472.7314,52.506493,14599.193};
+		dir[]={-0.86496371,-0.49019536,0.10747258};
+		up[]={-0.48645565,0.87161368,0.0604426};
+		aside[]={0.12330341,6.8881491e-008,0.99237233};
 	};
 };
 binarizationWanted=0;
@@ -521,7 +521,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=564;
+		items=565;
 		class Item0
 		{
 			dataType="Logic";
@@ -20181,7 +20181,7 @@ class Mission
 			};
 			id=1266;
 			type="Land_PierConcrete_01_16m_F";
-			atlOffset=-0.22;
+			atlOffset=-0.21999985;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26311,16 +26311,75 @@ class Mission
 			type="C_Scooter_Transport_01_F";
 			atlOffset=0.24378335;
 		};
+		class Item564
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5438.0815,39.770973,14598.031};
+				angles[]={0.0026744273,1.9526646,6.1167397};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this setFlagTexture ""media\images\tfu_flag.paa"";";
+			};
+			id=1623;
+			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulationglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=35;
+			nextID=36;
 		};
 		class Links
 		{
-			items=35;
+			items=36;
 			class Item0
 			{
 				linkID=0;
@@ -26665,6 +26724,16 @@ class Mission
 			{
 				linkID=34;
 				item0=1500;
+				item1=1232;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item35
+			{
+				linkID=35;
+				item0=1623;
 				item1=1232;
 				class CustomData
 				{
