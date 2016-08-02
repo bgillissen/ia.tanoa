@@ -17,19 +17,6 @@ class Header
 		maxPlayers = 60;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
 	}; 
 
-//HUD Controls
-showHUD[] = {
-	true,	// Scripted HUD (same as showHUD command)
-	true,	// Vehicle + soldier info
-	true,	// Vehicle radar [HIDDEN]
-	true,	// Vehicle compass [HIDDEN]
-	true,	// Tank direction indicator
-	true,	// Commanding menu
-	true,	// Group Bar
-	false,	// HUD Weapon Cursors
-	true	// HUD Squad Radar
-};
-
 //------------------------- Admin
 enableDebugConsole = 1;									// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.
 allowFunctionsLog = 0; 									// Log functions to .rpt. disabled with 0

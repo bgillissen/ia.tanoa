@@ -62,8 +62,8 @@ if (PARAMS_MobileArmory != 0) then {
 	if (PARAMS_MobileArmory == 1) then {
 		player addAction ["Mobile Armory","scripts\VAS\open.sqf",[],10,FALSE,FALSE,'','[] call QS_fnc_conditionMobileArmory'];
 	};
-	if (PARAMS_MobileArmory == 2) then {
-		/* ARSENAL */
+	if (PARAMS_MobileArmory == 2) then { 
+	
 	};
 	if (PARAMS_MobileArmory == 3) then {
 		player addAction ["Mobile Armory","scripts\VAS\open.sqf",[],10,FALSE,FALSE,'','[] call QS_fnc_conditionMobileArmory'];

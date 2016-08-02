@@ -81,7 +81,7 @@ private ["_flatPos","_accepted","_position","_randomDir","_x","_briefing","_enem
 	{
 		_x addCuratorEditableObjects [[boat], false];
 		_x addCuratorEditableObjects [units _smuggleGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 	*/
 	//---------- SHIPPING TRAWLER AND INFLATABLE BOAT FOR AMBIENCE
 	

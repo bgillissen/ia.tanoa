@@ -65,7 +65,7 @@ if (_reward isKindOf "Rabbit_F") exitWith {
 	_GAU removeWeapon ("M134_minigun");
 	_GAU addWeapon ("HMG_127_APC");
 	_GAU addMagazine ("500Rnd_127x99_mag_Tracer_Red");
-	{_x addCuratorEditableObjects [[_GAU], false];} foreach adminCurators;
+	{_x addCuratorEditableObjects [[_GAU], false];} foreach allCurators;
 };
 if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
 	_mortar = createVehicle ["B_Mortar_01_F", getMarkerPos "smReward1",smMarkerList,0,"NONE"];
@@ -86,8 +86,8 @@ if (_reward isKindOf "Land_GarbageBags_F") exitWith {
 	_GMG addWeapon ("GMG_20mm");
 	_GMG addMagazine ("40Rnd_20mm_G_belt");
 	_GMG addMagazine ("40Rnd_20mm_G_belt");
-	{_x addCuratorEditableObjects [[_GMG], false];} foreach adminCurators;
+	{_x addCuratorEditableObjects [[_GMG], false];} foreach allCurators;
 };
 {
 	_x addCuratorEditableObjects [[_reward], false];
-} foreach adminCurators;
+} foreach allCurators;

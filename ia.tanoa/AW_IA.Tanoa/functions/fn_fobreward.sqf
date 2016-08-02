@@ -41,4 +41,4 @@ if (_reward isKindOf "Land_InfoStand_V1_F") exitWith {
 };
 {
 	_x addCuratorEditableObjects [[_reward], false];
-} foreach adminCurators;
+} foreach allCurators;

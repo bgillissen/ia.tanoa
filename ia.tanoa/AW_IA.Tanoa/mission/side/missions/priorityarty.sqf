@@ -102,7 +102,7 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 
 	{
 		_x addCuratorEditableObjects [[priorityObj1, priorityObj2, ammoTruck] + (units _priorityGroup), false];
-	} foreach adminCurators;
+	} foreach allCurators;
 	
 //-------------------- 4. SPAWN H-BARRIER RING
 	

@@ -60,7 +60,7 @@ for "_x" from 1 to PARAMS_AAPatrol do {
 	{
 		_x addCuratorEditableObjects [[_aa], false];
 		_x addCuratorEditableObjects [units _aaGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 	
@@ -76,7 +76,7 @@ for "_x" from 1 to PARAMS_GroupPatrol do {
 
 	{
 		_x addCuratorEditableObjects [units _patrolGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 	
@@ -103,7 +103,7 @@ for "_x" from 1 to PARAMS_StaticMG do {
 	{
 		_x addCuratorEditableObjects [[_static], false];
 		_x addCuratorEditableObjects [units _staticGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 };
 	
 //---------- INFANTRY OVERWATCH
@@ -118,7 +118,7 @@ for "_x" from 1 to PARAMS_Overwatch do {
 
 	{
 		_x addCuratorEditableObjects [units _overwatchGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 
@@ -151,7 +151,7 @@ for "_x" from 0 to 1 do {
 	{
 		_x addCuratorEditableObjects [[_AOmrap], false];
 		_x addCuratorEditableObjects [units _AOmrapGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 
 };
@@ -185,7 +185,7 @@ for "_x" from 0 to (3 + (random 2)) do {
 	{
 		_x addCuratorEditableObjects [[_AOveh], false];
 		_x addCuratorEditableObjects [units _AOvehGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 	
@@ -229,7 +229,7 @@ if((random 10 <= PARAMS_AirPatrol)) then {
 	{
 		_x addCuratorEditableObjects [[_air], false];
 		_x addCuratorEditableObjects [units _airGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 
@@ -246,7 +246,7 @@ for "_x" from 1 to PARAMS_SniperTeamsPatrol do {
 
 	{
 		_x addCuratorEditableObjects [units _sniperGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 
@@ -313,7 +313,7 @@ if (random 1 >= 0.5) then {
 	};
 	{
 		_x addCuratorEditableObjects [units _newGrp, false];
-	} forEach adminCurators;		
+	} forEach allCurators;		
 } forEach (getMarkerPos currentAO nearObjects ["House", 800]);
 
 _enemiesArray;

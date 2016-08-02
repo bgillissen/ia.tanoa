@@ -37,7 +37,7 @@ for "_x" from 0 to (1 + (random 3)) do {
 
 	{
 		_x addCuratorEditableObjects [units _infteamPatrol, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 
@@ -62,6 +62,6 @@ _enemiesArray = _enemiesArray + [_SMveh];
 {
 	_x addCuratorEditableObjects [[_SMveh], false];
 	_x addCuratorEditableObjects [units _SMvehPatrol, false];
-} foreach adminCurators;
+} foreach allCurators;
 
 _enemiesArray

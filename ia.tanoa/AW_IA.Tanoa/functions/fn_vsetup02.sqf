@@ -42,7 +42,9 @@ _buzzard = ["I_Plane_Fighter_03_AA_F"];
 //============================================= SORT
 //===== Add to Zeus
 
-{_x addCuratorEditableObjects [[_u],false];} count allCurators;
+{
+	_x addCuratorEditableObjects [[_u], true];
+} count allCurators;
 
 //===== Heli sling
 

@@ -98,9 +98,3 @@ _GlobalHint = format["<t align='center' size='2.2' color='#FAAF3A'>%1<br/></t><t
 
 [_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
 } else {};
-
-
-
-
-
-

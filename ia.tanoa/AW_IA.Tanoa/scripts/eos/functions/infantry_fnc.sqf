@@ -24,6 +24,6 @@ for "_x" from 1 to _grpSize do {
 
 {
 	_x addCuratorEditableObjects [units _grp, false];
-} foreach adminCurators;
+} foreach allCurators;
 
 _grp
