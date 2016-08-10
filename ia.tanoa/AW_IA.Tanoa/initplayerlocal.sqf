@@ -55,7 +55,7 @@ if (PARAMS_HeliRope != 0) then {call compile preprocessFileLineNumbers "scripts\
 
 tawvd_disablenone = false;
 
-//--------------------- Arty Computer and Squad Manager
+//--------------------- Arty Computer
 
 enableEngineArtillery false;
 if (player isKindOf "B_crew_F") then {
@@ -64,7 +64,10 @@ if (player isKindOf "B_crew_F") then {
 if (player isKindOf "B_support_Mort_F") then {
 	enableEngineArtillery true;
 };
-["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+
+//--------------------- Squad Manager
+
+["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
 
 //--------------------- Billboard Image Randomiser
 	Bill_1 setObjectTexture [0,"media\images\billboard2.paa"];
