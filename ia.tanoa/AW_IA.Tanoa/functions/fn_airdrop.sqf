@@ -27,7 +27,7 @@ _chuteType = "B_Parachute_02_F";			//parachute for blufor, for opfor and greenfo
 _crateType =  "B_supplyCrate_F";			//ammocrate class for blufor, feel free to change to whichever box you desire
 _smokeType =  "SmokeShellPurple";  			//smoke shell color you want to use
 _lightType =  "Chemlight_blue";  			//chemlightcolor you want used
-_reloadtime = 600;  							// time before next ammo drop is available to use, default 600 or 480
+_reloadtime = 600;  						// time before next ammo drop is available to use, default 600 or 480
 _minheight = 39;  							// the height you have to be before you can actually drop the crate
 
 //--------------------------------------------------------- MEAT AND POTATOES
@@ -44,29 +44,33 @@ _light attachTo [_chute, [0, 0, 0]];
 
 clearWeaponCargoGlobal ammoDropCrate;
 clearMagazineCargoGlobal ammoDropCrate;
+clearBackpackCargoGlobal ammoDropCrate;
 
 //---------------------------------------------------- CRATE CONTENTS
 
-ammoDropCrate addMagazineCargoGlobal ["5Rnd_127x108_Mag", 10];
-ammoDropCrate addMagazineCargoGlobal ["7Rnd_408_Mag", 15];
-ammoDropCrate addMagazineCargoGlobal ["30Rnd_556x45_Stanag", 40];
+ammoDropCrate addWeaponCargoGlobal ["launch_RPG32_F", 3];
+
+ammoDropCrate addItemCargoGlobal ["Laserdesignator", 5];
+ammoDropCrate addItemCargoGlobal ["Laserbatteries", 5];
+ammoDropCrate addItemCargoGlobal ["MineDetector", 5];
+ammoDropCrate addItemCargoGlobal ["NVGoggles", 5];
+ammoDropCrate addItemCargoGlobal ["FirstAidKit", 40];
+ammoDropCrate addItemCargoGlobal ["Medikit", 3];
+ammoDropCrate addItemCargoGlobal ["ToolKit", 3];
+
+ammoDropCrate addMagazineCargoGlobal ["SatchelCharge_Remote_Mag", 5];
+ammoDropCrate addMagazineCargoGlobal ["DemoCharge_Remote_Mag", 10];
+ammoDropCrate addMagazineCargoGlobal ["SmokeShell", 40];
+ammoDropCrate addMagazineCargoGlobal ["HandGrenade", 15];
+ammoDropCrate addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell", 40];
+ammoDropCrate addMagazineCargoGlobal ["30Rnd_556x45_Stanag_Tracer_Red", 40];
 ammoDropCrate addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag_Tracer", 40];
 ammoDropCrate addMagazineCargoGlobal ["20Rnd_762x51_Mag", 30];
-ammoDropCrate addMagazineCargoGlobal ["200Rnd_65x39_cased_Box_Tracer", 10];
-ammoDropCrate addMagazineCargoGlobal ["30Rnd_65x39_caseless_green", 40];
-ammoDropCrate addMagazineCargoGlobal ["150Rnd_762x51_Box", 10];
-ammoDropCrate addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag", 40];
-ammoDropCrate addMagazineCargoGlobal ["SatchelCharge_Remote_Mag", 2];
-ammoDropCrate addMagazineCargoGlobal ["HandGrenade", 6];
-ammoDropCrate addMagazineCargoGlobal ["SmokeShell", 6];
-ammoDropCrate addMagazineCargoGlobal ["SmokeShellGreen", 6];
-ammoDropCrate addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell", 6];
-ammoDropCrate addMagazineCargoGlobal ["RPG32_HE_F", 2];
-ammoDropCrate addMagazineCargoGlobal ["RPG32_F", 2];
-ammoDropCrate addMagazineCargoGlobal ["NLAW_F", 3];
-ammoDropCrate addMagazineCargoGlobal ["Titan_AT", 2];
-ammoDropCrate addMagazineCargoGlobal ["Titan_AA", 2];
-
+ammoDropCrate addMagazineCargoGlobal ["130Rnd_338_Mag", 10];
+ammoDropCrate addMagazineCargoGlobal ["5Rnd_127x108_Mag", 10];
+ammoDropCrate addMagazineCargoGlobal ["7Rnd_408_Mag", 15];
+ammoDropCrate addMagazineCargoGlobal ["RPG32_F", 5];
+ammoDropCrate addMagazineCargoGlobal ["Titan_AT", 5];
 //--------------------------------------------------- BRIEF
 
 pvBroadcast = [WEST,"AirBase"] sideChat "UH-80 Supply Drop has been deployed!"; publicVariable "pvBroadcast";

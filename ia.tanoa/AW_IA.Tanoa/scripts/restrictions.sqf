@@ -71,11 +71,15 @@ _sniperTeam = ["B_sniper_F",
 			   "B_spotter_F"
 			  ];
 _sniperOpt = ["optic_SOS",
-              "optic_LRPS"
+              "optic_LRPS",
+              "optic_AMS",
+              "optic_AMS_khk",
+              "optic_AMS_snd"
               ];
 //===== THERMAL OPTICS
-_opticsAllowed = ["B_Soldier_SL_F"];
+_opticsAllowed = ["B_Soldier_SL_F", "B_Soldier_TL_F"];
 _specialisedOptics = ["optic_Nightstalker",
+					  "optic_nvs",
                       "optic_tws",
                       "optic_tws_mg"
                       ];

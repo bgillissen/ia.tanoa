@@ -30,6 +30,8 @@ call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf";		// re
 
 call compile preprocessFile "scripts\radiofreq.sqf";							// TFAR RadioFreqs
 
+[] execVM "scripts\fieldrepair.sqf";											//Custom Repair Script
+
 tf_no_auto_long_range_radio = true; 	//so player do not spawn with longrange radio as backpacks
 TF_give_microdagr_to_soldier = false; 	//so player do not have Dagr in theyr inventory
 TF_terrain_interception_coefficient = 1;
@@ -50,3 +52,4 @@ missionNamespace setVariable ["SA_TOW_RULES_OVERRIDE", [	["Car", 	"CAN_TOW", "Ca
 															["Truck", 	"CAN_TOW", "Car"], 
 															["Ship", 	"CAN_TOW", "Ship"] 
 													   ], true];
+

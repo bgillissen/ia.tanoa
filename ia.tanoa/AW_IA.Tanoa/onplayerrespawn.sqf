@@ -13,7 +13,7 @@ Description:
 	Client scripts that should execute after respawn.
 ______________________________________________________*/
 
-private ["_iamhelipilot"];
+private ["_iamhelipilot", "_iamtankcrew"];
 
 waitUntil {!isNull player};
 waitUntil {player == player};
@@ -28,23 +28,14 @@ if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
 _helipilots = ["B_Helipilot_F","B_helicrew_F","O_Helipilot_F","O_helicrew_F","I_Helipilot_F","I_helicrew_F"];
 _iamhelipilot = ({typeOf player == _x} count _helipilots) > 0;
 if (_iamhelipilot) then {
-	//===== FAST ROPE
-	if (PARAMS_HeliRope != 0) then {
-		player addAction ["Toss Ropes",zlt_fnc_createropes, [], -1, false, false, '','[] call zlt_fnc_ropes_cond'];
-		player addAction ["Cut Ropes",zlt_fnc_removeropes, [], 98, false, false, '','not zlt_mutexAction and count ((vehicle player) getvariable ["zlt_ropes", []]) != 0'];
-	};
 	//===== HELI SUPPLY DROP
 	if (PARAMS_HeliDrop != 0) then {
 		player addAction ["Drop supply crate",QS_fnc_airDrop,[],0,false,true,'','[] call QS_fnc_conditionAirDrop'];
 	};
-	//===== UH-80 TURRETS
-	if (PARAMS_UH80TurretControl != 0) then {
-		inturretloop = false;
-		UH80TurretAction = player addAction ["Turret Control",QS_fnc_uh80TurretControl,[],-95,false,false,'','[] call QS_fnc_conditionUH80TurretControl'];
-	};
 };
 
 //============================= UAV
+
 _uavop = ["rhsusf_army_ocp_uav"];
 _iamuavop = ({typeOf player == _x} count _uavop) > 0;
 
@@ -52,12 +43,8 @@ if (_iamuavop) then {
 	player addAction ["Load new UAV software",QS_fnc_actionUAVSoftware,[],20,true,true,'','[] call QS_fnc_conditionUAVSoftware'];
 };
 
-//============================= non-pilots units fastrope
-if (PARAMS_HeliRope != 0) then {
-	player addAction ["Fast Rope (Press Space)", zlt_fnc_fastrope, [], 99, false, false, '','not zlt_mutexAction and count ((vehicle player) getvariable ["zlt_ropes", []]) != 0 and player != driver vehicle player'];
-};
-
 //============================= Mobile arsenal/Mobile Vas
+
 if (PARAMS_MobileArmory != 0) then {
 	if (PARAMS_MobileArmory == 1) then {
 		player addAction ["Mobile Armory","scripts\VAS\open.sqf",[],10,FALSE,FALSE,'','[] call QS_fnc_conditionMobileArmory'];

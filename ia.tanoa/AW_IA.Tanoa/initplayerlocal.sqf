@@ -70,19 +70,20 @@ if (player isKindOf "B_support_Mort_F") then {
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
 
 //--------------------- Billboard Image Randomiser
-	Bill_1 setObjectTexture [0,"media\images\billboard2.paa"];
+
+Bill_1 setObjectTexture [0,"media\images\billboard2.paa"];
 	
-	_imageList2 = [1,3,4,5,6,7,8,9,10];
-	_bill2 = _imageList2 call BIS_fnc_selectRandom;
-	if (_bill2 == 1) then {Bill_2 setObjectTexture [0,"media\images\billboard1.paa"]};
-	if (_bill2 == 3) then {Bill_2 setObjectTexture [0,"media\images\billboard3.paa"]};
-	if (_bill2 == 4) then {Bill_2 setObjectTexture [0,"media\images\billboard4.paa"]};
-	if (_bill2 == 5) then {Bill_2 setObjectTexture [0,"media\images\billboard5.paa"]};
-	if (_bill2 == 6) then {Bill_2 setObjectTexture [0,"media\images\billboard6.paa"]};
-	if (_bill2 == 7) then {Bill_2 setObjectTexture [0,"media\images\billboard7.paa"]};
-	if (_bill2 == 8) then {Bill_2 setObjectTexture [0,"media\images\billboard8.paa"]};
-	if (_bill2 == 9) then {Bill_2 setObjectTexture [0,"media\images\billboard9.paa"]};
-	if (_bill2 == 10) then {Bill_2 setObjectTexture [0,"media\images\billboard10.paa"]};
+_imageList2 = [1,3,4,5,6,7,8,9,10];
+_bill2 = _imageList2 call BIS_fnc_selectRandom;
+if (_bill2 == 1) then {Bill_2 setObjectTexture [0,"media\images\billboard1.paa"]};
+if (_bill2 == 3) then {Bill_2 setObjectTexture [0,"media\images\billboard3.paa"]};
+if (_bill2 == 4) then {Bill_2 setObjectTexture [0,"media\images\billboard4.paa"]};
+if (_bill2 == 5) then {Bill_2 setObjectTexture [0,"media\images\billboard5.paa"]};
+if (_bill2 == 6) then {Bill_2 setObjectTexture [0,"media\images\billboard6.paa"]};
+if (_bill2 == 7) then {Bill_2 setObjectTexture [0,"media\images\billboard7.paa"]};
+if (_bill2 == 8) then {Bill_2 setObjectTexture [0,"media\images\billboard8.paa"]};
+if (_bill2 == 9) then {Bill_2 setObjectTexture [0,"media\images\billboard9.paa"]};
+if (_bill2 == 10) then {Bill_2 setObjectTexture [0,"media\images\billboard10.paa"]};
 	
 //--------------------- Squad Url Hint
 
