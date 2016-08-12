@@ -27,14 +27,11 @@ if (isNull _u) exitWith {};
 
 _ghosthawk = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F","B_CTRG_Heli_Transport_01_tropic_F"]; 			// ghosthawk
 _strider = ["I_MRAP_03_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F"];					// strider
-_blackVehicles = ["B_Heli_Light_01_armed_F"];									// black skin
+_blackVehicles = ["B_Heli_Light_01_armed_F", "B_Heli_Light_01_F"];				// black skin
 _wasp = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F"];						// MH-9
 _orca = ["O_Heli_Light_02_unarmed_F"];											// Orca
 _mobileArmory = ["B_Truck_01_ammo_F"];											// Mobile Armory
 _noAmmoCargo = ["B_APC_Tracked_01_CRV_F","B_Truck_01_ammo_F"];					// Bobcat CRV
-_slingHeli = ["I_Heli_Transport_02_F","B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F"];						// sling capable
-_slingable = ["B_Heli_Light_01_F"];												// slingable
-_notSlingable = ["B_Heli_Light_01_armed_F", "B_Heli_Attack_01_F"];				// not slingable
 _dropHeli = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F","B_CTRG_Heli_Transport_01_tropic_F"]; 			// drop capable
 _uav = ["B_UAV_02_CAS_F","B_UAV_02_F","B_UGV_01_F","B_UGV_01_rcws_F"];			// UAVs
 _buzzard = ["I_Plane_Fighter_03_AA_F"];
@@ -45,13 +42,6 @@ _buzzard = ["I_Plane_Fighter_03_AA_F"];
 {
 	_x addCuratorEditableObjects [[_u], true];
 } count allCurators;
-
-//===== Heli sling
-
-if (_t in _slingHeli) then {
-	_u setVariable ['sling_veh',TRUE,TRUE];
-};
-_u setVariable ["slingable",TRUE,TRUE];
 
 //===== black camo
 
@@ -106,9 +96,10 @@ if (_t in _dropHeli) then {
 //===== Ghosthawk specific, animated doors, and turret locking system
 
 if (_t in _ghosthawk) then {
-	_u setVariable ["turretL_locked",FALSE,TRUE];
-	_u setVariable ["turretR_locked",FALSE,TRUE];
-	[_u] execVM "scripts\vehicle\animate\ghosthawk.sqf";
+	//_u setVariable ["turretL_locked",FALSE,TRUE];
+	//_u setVariable ["turretR_locked",FALSE,TRUE];
+	//[_u] execVM "scripts\vehicle\animate\ghosthawk.sqf";
+	_u setVariable ["door_open",FALSE,TRUE];
 };
 
 //===== UAV respawn fixer

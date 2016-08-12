@@ -18,6 +18,8 @@ class QS
 		class clearPosition {};
 		class conditionAirDrop {};
 		class conditionClearInventory {};
+		class conditionGHOpenDoors {};
+		class conditionGHCloseDoors {};
 		class conditionMobileArmory {};
 		class conditionRefuelUAV {};
 		class conditionSlingAttach {};
@@ -35,6 +37,8 @@ class QS
 		class garrisonFortEAST {};
 		class garrisonFortIND {};
 		class garrisonFortFIA {};
+		class GHCloseDoors {};
+		class GHOpenDoors {};
 		class loadInventory {};
 		class respawnPilot {};
 		class respawnCrew {};
