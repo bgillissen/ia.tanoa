@@ -25,7 +25,7 @@ if (isNull _u) exitWith {};
 
 //============================================= ARRAYS
 
-_ghosthawk = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F"]; 			// ghosthawk
+_ghosthawk = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F","B_CTRG_Heli_Transport_01_tropic_F"]; 			// ghosthawk
 _strider = ["I_MRAP_03_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F"];					// strider
 _blackVehicles = ["B_Heli_Light_01_armed_F"];									// black skin
 _wasp = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F"];						// MH-9

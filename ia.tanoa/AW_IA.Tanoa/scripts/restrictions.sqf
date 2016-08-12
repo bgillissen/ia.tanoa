@@ -68,7 +68,9 @@ _sniperSpecialised = ["srifle_GM6_F",
                      ];
 //===== SNIPER OPTICS
 _sniperTeam = ["B_sniper_F",
-			   "B_spotter_F"
+			   "B_spotter_F",
+			   "B_soldier_M_F",
+			   "B_Sharpshooter_F"
 			  ];
 _sniperOpt = ["optic_SOS",
               "optic_LRPS",

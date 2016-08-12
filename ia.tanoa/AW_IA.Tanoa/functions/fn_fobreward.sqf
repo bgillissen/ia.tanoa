@@ -3,16 +3,32 @@
 smRewards =
 [
 	["an Armed Blackfish", "B_T_VTOL_01_armed_F"],
-	["a Blackfoot", "B_Heli_Attacj_01_F"],
+	["a Blackfoot", "B_Heli_Attack_01_F"],
 	["an FV-720 Mora", "I_APC_tracked_03_cannon_F"],
 	["an AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F"],
 	["an AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F"],
 	["an MBT-52 Kuma", "I_MBT_03_cannon_F"],
-	["an Offraod (Repair)", "C_Offroad_01_repair_F"],
-	["a Strider HMG", "I_MRAP_03_hmg_F"],
 	["an Offroad (Repair)", "C_Offroad_01_repair_F"],
 	["a Strider HMG", "I_MRAP_03_hmg_F"],
-	["a Mobile Mortar Truck", "B_G_Offroad_01_repair_F"]
+	["a Mobile Mortar Truck", "B_G_Offroad_01_repair_F"],
+	["an MI-48 Kajman", "O_Heli_Attack_02_black_F"],
+	["a PO-30 Orca", "O_Heli_Light_02_F"],
+	["a WY-55 Hellcat", "I_Heli_light_03_F"],
+	["an AH-9 Pawnee", "B_Heli_Light_01_armed_F"],
+	["an IFV-6a Cheetah", "B_APC_Tracked_01_AA_F"],
+	["an AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F"],
+	["an MI-290 Taru (Transport)", "O_Heli_Transport_04_covered_F"],
+	["an MI-290 Taru (Bench)", "O_Heli_Transport_04_bench_F"]
+];
+opforRewards = ["I_APC_tracked_03_cannon_F",
+				"I_APC_Wheeled_03_cannon_F",
+				"I_MBT_03_cannon_F",
+				"I_MRAP_03_hmg_F",
+				"O_Heli_Attack_02_black_F",
+				"O_Heli_Light_02_F",
+				"I_Heli_light_03_F",
+				"O_Heli_Transport_04_covered_F",
+				"O_Heli_Transport_04_bench_F"
 ];
 
 _veh = smRewards call BIS_fnc_selectRandom;
@@ -32,13 +48,13 @@ if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
 	_mortar = "B_Mortar_01_F" createVehicle getMarkerPos apcPad1;
 	_mortar attachTo [_reward,[0,-2.5,.3]];
 };
-if (_reward isKindOf "Land_InfoStand_V1_F") exitWith {
-	deleteVehicle _reward;
-	_truck = "B_G_Offroad_01_repair_F" createVehicle getMarkerPos apcPad1;
-	_truck setDir _vicDir1;
-	_GMG = createVehicle ["B_GMG_01_high_F", getMarkerPos "smReward1",smMarkerList,0,"NONE"];
-	_GMG attachTo [_truck,[0,-2.5,.8]];
-};
+
+{
+	if (_reward isKindOf _x) then {
+		_reward setVariable ["tf_side", "west", true];
+	}
+} foreach opforRewards;
+
 {
 	_x addCuratorEditableObjects [[_reward], false];
 } foreach allCurators;

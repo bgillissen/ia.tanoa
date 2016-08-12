@@ -2,7 +2,7 @@ private ["_veh","_speed"];
 _veh = _this select 0;
 while {alive _veh} do {
 	_speed = speed _veh;
-	if (_speed < 10) then {  					
+	if (_speed < 100) then {  					
 		_veh animateDoor ['door_R',1];
 		_veh animateDoor ['door_L',1];
 	} else {
