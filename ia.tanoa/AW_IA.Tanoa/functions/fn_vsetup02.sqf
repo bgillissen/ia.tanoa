@@ -28,7 +28,6 @@ if (isNull _u) exitWith {};
 _ghosthawk = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F","B_CTRG_Heli_Transport_01_tropic_F"]; 			// ghosthawk
 _strider = ["I_MRAP_03_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F"];					// strider
 _blackVehicles = ["B_Heli_Light_01_armed_F", "B_Heli_Light_01_F"];				// black skin
-_wasp = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F"];						// MH-9
 _orca = ["O_Heli_Light_02_unarmed_F"];											// Orca
 _mobileArmory = ["B_Truck_01_ammo_F"];											// Mobile Armory
 _noAmmoCargo = ["B_APC_Tracked_01_CRV_F","B_Truck_01_ammo_F"];					// Bobcat CRV
@@ -46,7 +45,9 @@ _buzzard = ["I_Plane_Fighter_03_AA_F"];
 //===== black camo
 
 if (_t in _blackVehicles) then {
-	for "_i" from 0 to 9 do {_u setObjectTextureGlobal [_i,"#(argb,8,8,3)color(0,0,0,0.6)"];};
+	for "_i" from 0 to 9 do {
+		_u setObjectTextureGlobal [_i,"#(argb,8,8,3)color(0,0,0,0.6)"];
+	};
 };
 
 //===== strider nato skin
@@ -54,12 +55,6 @@ if (_t in _blackVehicles) then {
 if (_t in _strider) then {
 	_u setObjectTextureGlobal [0,'\A3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa'];
 	_u setObjectTextureGlobal [1,'\A3\data_f\vehicles\turret_co.paa']; 
-};
-
-//===== aaf skin
-
-if(_t in _wasp) then {
-	_u setObjectTextureGlobal [0,'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_digital_co.paa'];
 };
 
 //===== aaf skin
