@@ -101,4 +101,4 @@ if (_email == "rainman@taskforceunicorn.com") then {
 _GlobalHint = format["<t align='center' size='2.2' color='#FAAF3A'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To become a TFU member, apply to taskforceunicorn.com</t><br/>",_squad,_name];
 
 [_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
-} else {};
+};

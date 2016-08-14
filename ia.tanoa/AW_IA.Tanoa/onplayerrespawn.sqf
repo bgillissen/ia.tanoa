@@ -32,6 +32,7 @@ if (_iamhelipilot) then {
 	if (PARAMS_HeliDrop != 0) then {
 		player addAction ["Drop supply crate",QS_fnc_airDrop,[],0,false,true,'','[] call QS_fnc_conditionAirDrop'];
 	};
+	//===== Ghosthawk open/close doors
 	player addAction ["Open Side Doors",QS_fnc_GHOpenDoors,[],0,false,true,'','[] call QS_fnc_conditionGHOpenDoors'];
 	player addAction ["Close Side Doors",QS_fnc_GHCloseDoors,[],0,false,true,'','[] call QS_fnc_conditionGHCloseDoors'];
 };
