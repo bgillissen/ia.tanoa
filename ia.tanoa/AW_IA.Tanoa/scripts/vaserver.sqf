@@ -255,6 +255,9 @@ _box = _this select 0;
         "rhsusf_mag_6Rnd_M781_Practice",
         "rhsusf_mag_6Rnd_M576_Buckshot",
         "rhsusf_mag_10Rnd_STD_50BMG_M33",
+        "rhsusf_5Rnd_762x51_m118_special_Mag",
+        "rhsusf_5Rnd_762x51_m993_Mag",
+        "rhsusf_5Rnd_762x51_m62_Mag",
         //"rhsusf_mag_10Rnd_STD_50BMG_mk211", explosive sniper ammo
         
       	"RH_15Rnd_9x19_M9",		//RH Pistols
@@ -466,6 +469,9 @@ _box = _this select 0;
         "rhs_weap_hk416d10_LMT",
         "rhs_weap_hk416d145",
         "rhs_weap_hk416d145_m320",
+        "rhs_weap_m24sws",
+        "rhs_weap_m24sws_blk",
+        "rhs_weap_m24sws_ghillie",
         
         "RH_deagle",			//RH Pistols
         "RH_deagleg",
@@ -625,6 +631,7 @@ _box = _this select 0;
         "U_B_FullGhillie_lsh",
         "U_B_FullGhillie_sard",
         "U_B_FullGhillie_ard",
+        "U_B_T_Sniper_F",
         "U_B_HeliPilotCoveralls",
         "U_B_PilotCoveralls", 
         "U_B_Wetsuit",
@@ -778,6 +785,7 @@ _box = _this select 0;
         "rhsusf_acc_SpecterDR_pvs27",
         "rhsusf_acc_premier",
         "rhsusf_acc_premier_anpvs27",
+        "rhsusf_acc_premier_low",
         "rhsusf_acc_anpeq15_bk",
         "rhsusf_acc_anpeq15_bk_light",
         "rhsusf_acc_anpeq15_bk_top",
